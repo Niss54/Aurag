@@ -1,0 +1,507 @@
+import os
+from typing import List, Optional
+from fastapi import APIRouter, Depends, HTTPException, Query
+from pydantic import BaseModel, Field
+from sqlalchemy.orm import Session
+
+
+from backend.app.core.neo4j import get_session
+from backend.app.db.database import get_db
+from backend.app.services.machine_money.registry import generate_idempotency_key
+from backend.app.services.machine_money.schemas import (
+    InvoiceRequest,
+    JudgeExecutionRequest,
+    JudgeExecutionResponse,
+    PaymentStatus,
+    ProviderHealth,
+    SelectionStrategy,
+    ServiceQuote,
+    SimulationRequest,
+    SimulationResult,
+    VendorRFQRequest,
+    VendorRFQResponse,
+    MachineMoneyMetrics,
+    IndustrialEconomicsModel,
+    IndustrialEconomicsRequest,
+    IndustrialPlantAssumptions,
+    HumanApprovalEvidencePackage,
+    JudgeScenarioFixture,
+)
+from backend.app.services.machine_money.service import MachineMoneyService
+
+router = APIRouter(prefix="/machine-money", tags=["machine-money"])
+service = MachineMoneyService()
+
+
+class QuoteRequest(BaseModel):
+    equipment_id: str = Field(..., json_schema_extra={"example": "P-101A"})
+    service_id: Optional[str] = Field(default=None, description="Registered service ID from demo catalog")
+    service_description: Optional[str] = Field(default=None, json_schema_extra={"example": "Bearing replacement and laser alignment"})
+    cost_sats: Optional[int] = Field(default=None, gt=0)
+
+
+class PayInvoiceRequest(BaseModel):
+    bolt11: str = Field(..., description="BOLT11 payment request string")
+    amount_sats: int = Field(..., gt=0, description="Amount in satoshis")
+    work_order_id: Optional[str] = None
+    event_id: Optional[str] = None
+    quote_id: Optional[str] = None
+    idempotency_key: Optional[str] = None
+    bypass_policy: bool = False
+    vendor_name: Optional[str] = None
+    confidence: Optional[float] = 0.95
+
+
+class ApprovePaymentRequest(BaseModel):
+    reviewer_id: str = Field(default="operator-lead", description="Identifier of approving plant engineer")
+    review_notes: Optional[str] = Field(default=None, description="Operational sign-off rationale")
+
+
+@router.get("/health", response_model=ProviderHealth)
+async def machine_money_health():
+    """Verify Machine Money subsystem status and configured payment provider."""
+    return await service.get_health()
+
+
+@router.get("/provider-status", response_model=ProviderHealth)
+async def machine_money_provider_status():
+    """Canonical backend-derived provider status and network settlement source (PRD3 Task 1.2)."""
+    return await service.get_health()
+
+
+@router.get("/providers")
+def get_providers():
+    """List registered demo service providers and verifiable service specifications (Section 12)."""
+    return service.get_providers_and_services()
+
+
+@router.post("/quote", response_model=ServiceQuote)
+def request_service_quote(req: QuoteRequest):
+    """Request a verifiable service quote for equipment maintenance."""
+    return service.generate_quote(
+        equipment_id=req.equipment_id,
+        service_description=req.service_description,
+        cost_sats=req.cost_sats,
+        service_id=req.service_id,
+    )
+
+
+@router.post("/invoice")
+async def create_invoice(req: InvoiceRequest, db: Session = Depends(get_db)):
+    """Generate a Lightning invoice and register a pending payment record."""
+    try:
+        if not req.idempotency_key and req.equipment_id and req.event_id:
+            req.idempotency_key = generate_idempotency_key(
+                site_id="plant-mumbai-01",
+                equipment_id=req.equipment_id,
+                service_id=req.memo[:24],
+                predictive_event_id=req.event_id,
+            )
+        record = await service.create_invoice(db, req)
+        return record.to_dict()
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.post("/pay")
+async def pay_invoice(req: PayInvoiceRequest, db: Session = Depends(get_db)):
+    """Execute a Lightning payment under automated spending policy governance."""
+    # Task 6.1: Backend policy is authoritative. A client cannot unilaterally bypass spending caps.
+    max_autopay = int(os.environ.get("MACHINE_MONEY_MAX_AUTOPAY_SATS", "500"))
+    if req.bypass_policy and req.amount_sats > max_autopay:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Policy violation: Client cannot bypass autonomous spending cap of {max_autopay} sats. Explicit human operator approval required via /approve.",
+        )
+
+    try:
+        record = await service.execute_payment(
+            db=db,
+            bolt11=req.bolt11,
+            amount_sats=req.amount_sats,
+            work_order_id=req.work_order_id,
+            event_id=req.event_id,
+            quote_id=req.quote_id,
+            idempotency_key=req.idempotency_key,
+            bypass_policy=req.bypass_policy,
+            vendor_name=req.vendor_name,
+            confidence=req.confidence if req.confidence is not None else 0.95,
+        )
+        return record.to_dict()
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+
+@router.get("/payments")
+def list_payments(limit: int = Query(default=50, ge=1, le=100), db: Session = Depends(get_db)):
+    """List recent Machine Money settlement records."""
+    records = service.list_payments(db, limit=limit)
+    return [r.to_dict() for r in records]
+
+
+@router.get("/payments/{payment_id}")
+def get_payment(payment_id: str, db: Session = Depends(get_db)):
+    """Fetch details of a specific payment by its payment_id."""
+    record = service.get_payment(db, payment_id)
+    if not record:
+        raise HTTPException(status_code=404, detail="Payment record not found")
+    return record.to_dict()
+
+
+@router.post("/payments/{payment_id}/approve")
+async def approve_payment(
+    payment_id: str,
+    req: Optional[ApprovePaymentRequest] = None,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """Operator human-in-the-loop sign-off to execute a payment previously held in approval queue."""
+    reviewer = req.reviewer_id if req else "operator-lead"
+    notes = req.review_notes if req else None
+    try:
+        record = await service.approve_payment(
+            db=db,
+            payment_id=payment_id,
+            reviewer_id=reviewer,
+            review_notes=notes,
+            neo4j_session=neo4j_session,
+        )
+        return record.to_dict()
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@router.post("/simulate", response_model=SimulationResult)
+def simulate_m2m_transaction(req: SimulationRequest, db: Session = Depends(get_db)):
+    """Dry-run simulation of M2M transaction workflow without mutating state or moving funds."""
+    try:
+        return service.simulate_m2m_transaction(db, req)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/payments/{payment_id}/trail")
+def get_payment_trail(
+    payment_id: str,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """Retrieve operational evidence graph trail explaining why this payment was made."""
+    return service.get_payment_trail(db, payment_id, neo4j_session=neo4j_session)
+
+
+class TelemetryTriggerRequest(BaseModel):
+    equipment_tag: str = Field(default="P-101A", description="Equipment identifier")
+    event_id: Optional[str] = Field(default="EVT-VIB-001", description="Predictive event identifier")
+    failure_event_id: Optional[str] = Field(default="FE-001", description="Matched failure signature")
+    confidence: float = Field(default=0.94, ge=0.0, le=1.0)
+    work_order_id: Optional[str] = Field(default="WO-2026-P101")
+    bypass_policy: bool = False
+    data_source_type: Optional[str] = Field(default="SYNTHETIC_GENERATOR", description="SYNTHETIC_GENERATOR or PUBLIC_DATASET")
+    dataset_name: Optional[str] = None
+    dataset_record_id: Optional[str] = None
+
+
+class AgentPaymentProposal(BaseModel):
+    action: str = Field(default="PAY_FOR_SERVICE", description="Must be 'PAY_FOR_SERVICE'")
+    service_id: str = Field(default="bearing-inspection", description="Target service from catalog")
+    equipment_tag: str = Field(default="P-101A", description="Equipment tag")
+    reason: str = Field(default="High-confidence vibration excursion matches FE-001")
+    evidence: List[str] = Field(default_factory=lambda: ["FE-001", "WO-1002", "PROC-001"])
+    confidence: float = Field(default=0.94, ge=0.0, le=1.0)
+    event_id: Optional[str] = None
+    work_order_id: Optional[str] = None
+
+
+@router.post("/trigger-from-telemetry")
+async def trigger_from_telemetry(
+    req: TelemetryTriggerRequest,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """Autonomous bridge: triggers quote -> policy -> invoice -> settlement from predictive telemetry (Section 16)."""
+    try:
+        from backend.app.services.machine_money.bridge import trigger_m2m_settlement_for_event
+        return await trigger_m2m_settlement_for_event(
+            db=db,
+            equipment_tag=req.equipment_tag,
+            event_id=req.event_id,
+            failure_event_id=req.failure_event_id,
+            confidence=req.confidence,
+            work_order_id=req.work_order_id,
+            bypass_policy=req.bypass_policy,
+            neo4j_session=neo4j_session,
+            data_source_type=req.data_source_type,
+            dataset_name=req.dataset_name,
+            dataset_record_id=req.dataset_record_id,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.post("/agent-tool")
+async def agent_payment_tool(
+    proposal: AgentPaymentProposal,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """Governed agent action boundary: LLM proposes service payment, backend policy engine enforces (Section 17)."""
+    try:
+        from backend.app.services.machine_money.bridge import handle_agent_payment_proposal
+        return await handle_agent_payment_proposal(
+            db=db,
+            proposal=proposal.model_dump(),
+            neo4j_session=neo4j_session,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+
+@router.get("/evidence/{payment_id}")
+def get_payment_evidence_package(payment_id: str, db: Session = Depends(get_db)):
+    """Retrieve structured cross-layer evidence package answering 'Why did the agent spend money?' (Section 18)."""
+    record = service.get_payment(db, payment_id)
+    if not record:
+        raise HTTPException(status_code=404, detail="Payment record not found")
+
+    import json
+    meta = json.loads(record.metadata_json) if record.metadata_json else {}
+    evidence = meta.get("evidence_package")
+    if not evidence:
+        from backend.app.services.machine_money.bridge import build_operational_evidence_package
+        evidence = build_operational_evidence_package(
+            session=None,
+            equipment_tag=meta.get("equipment_id", "P-101A"),
+            event_id=record.predictive_event_id,
+        )
+
+    return {
+        "payment_id": payment_id,
+        "amount_sats": record.amount_sats,
+        "status": record.status,
+        "paid_at": record.paid_at.isoformat() if record.paid_at else None,
+        "evidence_package": evidence,
+    }
+
+
+@router.get("/payments/{payment_id}/proof-package")
+async def get_payment_proof_package(
+    payment_id: str,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """BE-04: Retrieve complete structured proof package (non-secret audit records, preimage proof, policy, and graph links)."""
+    try:
+        return await service.get_proof_package(db=db, payment_id=payment_id, neo4j_session=neo4j_session)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/payments/{payment_id}/approval-evidence", response_model=HumanApprovalEvidencePackage)
+def get_payment_approval_evidence(payment_id: str, db: Session = Depends(get_db)):
+    """Task 6.2: Retrieve complete context (telemetry, economics, procedure, and policy) before human approval."""
+    try:
+        return service.get_approval_evidence(db=db, payment_id=payment_id)
+    except Exception as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+@router.get("/judge/fixture", response_model=JudgeScenarioFixture)
+def get_judge_scenario_fixture():
+    """Canonical single source of truth scenario fixture for Hacker House Goa demo."""
+    return JudgeScenarioFixture()
+
+
+@router.post("/judge/execute", response_model=JudgeExecutionResponse)
+async def execute_judge_mode(
+    req: Optional[JudgeExecutionRequest] = None,
+    db: Session = Depends(get_db),
+    neo4j_session = Depends(get_session),
+):
+    """Execute complete deterministic Judge Mode scenario with measured stage timings."""
+    payload = req or JudgeExecutionRequest()
+    try:
+        return await service.execute_judge_scenario(
+            db=db,
+            scenario=payload.scenario,
+            equipment_id=payload.equipment_id,
+            override_cost_sats=payload.override_cost_sats,
+            auto_approve=payload.auto_approve,
+            neo4j_session=neo4j_session,
+            confidence=payload.confidence,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.post("/judge/reset")
+async def reset_judge_mode():
+    """Reset Judge Mode demonstration state without clearing unrelated historical records."""
+    health = await service.get_health()
+    return {
+        "status": "RESET",
+        "message": "Judge Mode demo scenario reset to baseline ready state.",
+        "provider": health.provider_name,
+        "network": health.network,
+        "ready": True,
+    }
+
+
+@router.post("/rfq", response_model=VendorRFQResponse)
+async def request_vendor_rfq(req: Optional[VendorRFQRequest] = None):
+    """FR-04 / BE-03: Process multi-vendor RFQ bidding with explainable rule-driven selection."""
+    payload = req or VendorRFQRequest()
+    try:
+        return service.get_vendor_rfq(payload)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/rfq/{service_id}", response_model=VendorRFQResponse)
+async def get_service_rfq(
+    service_id: str,
+    strategy: SelectionStrategy = Query(SelectionStrategy.FASTEST_SLA, description="Selection strategy"),
+    max_budget_sats: int = Query(500, description="Autonomous cap budget in satoshis"),
+    equipment_id: str = Query("P-101A", description="Target equipment tag"),
+):
+    """FR-04 / BE-03: Retrieve multi-vendor RFQ bids and winning candidate for a specific catalog service."""
+    try:
+        req = VendorRFQRequest(
+            equipment_id=equipment_id,
+            service_id=service_id,
+            strategy=strategy,
+            max_budget_sats=max_budget_sats,
+        )
+        return service.get_vendor_rfq(req)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/analytics/metrics", response_model=MachineMoneyMetrics)
+def get_machine_money_metrics(db: Session = Depends(get_db)):
+    """Task 5.1: Retrieve aggregate Machine Money metrics across the payment ledger."""
+    try:
+        return service.get_analytics_metrics(db)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/analytics/economics", response_model=IndustrialEconomicsModel)
+def get_industrial_economics(
+    equipment_tag: str = Query("P-101A", description="Asset tag to evaluate"),
+    intervention_cost_sats: Optional[int] = Query(None, description="Intervention cost in satoshis"),
+    hourly_downtime_cost_usd: Optional[float] = Query(None, description="Hourly outage loss estimate in USD"),
+    unmitigated_downtime_hours: Optional[float] = Query(None, description="Estimated unmitigated downtime hours"),
+):
+    """Task 5.2 / BE-05: Transparent, versioned industrial economics calculation."""
+    try:
+        req = IndustrialEconomicsRequest(
+            equipment_tag=equipment_tag,
+            intervention_cost_sats=intervention_cost_sats,
+            hourly_downtime_cost_usd=hourly_downtime_cost_usd,
+            unmitigated_downtime_hours=unmitigated_downtime_hours,
+        )
+        return service.get_industrial_economics(req)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.post("/analytics/economics", response_model=IndustrialEconomicsModel)
+def calculate_custom_industrial_economics(req: IndustrialEconomicsRequest):
+    """Task 5.2 / BE-05: Calculate custom industrial economics with parameter overrides."""
+    try:
+        return service.get_industrial_economics(req)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@router.get("/analytics/assumptions/{equipment_tag}", response_model=IndustrialPlantAssumptions)
+def get_plant_assumptions_for_tag(equipment_tag: str):
+    """Task 5.2: Retrieve baseline synthetic plant assumptions stored separately for equipment."""
+    try:
+        return service.get_plant_assumptions(equipment_tag)
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+# ==============================================================================
+# NOVEL BITCOIN INNOVATION: NIP-47 NOSTR WALLET CONNECT & MULTI-HOP ONION ROUTING
+# ==============================================================================
+
+class NWCPayRequest(BaseModel):
+    bolt11: Optional[str] = None
+    amount_sats: int = Field(default=250, gt=0, le=500, description="Autonomous spend amount capped at 500 sats")
+    connection_uri: Optional[str] = None
+    memo: Optional[str] = "NWC Autonomous Equipment Intervention"
+
+
+class RouteCalculationRequest(BaseModel):
+    amount_sats: int = Field(default=250, gt=0)
+    target_vendor_id: str = Field(default="apex-diagnostics")
+    current_block_height: int = Field(default=890000)
+
+
+@router.get("/nwc/info")
+def get_nwc_info(uri: Optional[str] = None):
+    """Novel Bitcoin Innovation: Inspect active Nostr Wallet Connect (NIP-47) remote wallet configuration."""
+    from backend.app.services.machine_money.nwc import NWCClient
+    try:
+        client = NWCClient(uri)
+        return client.get_info()
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=f"Invalid NWC configuration: {str(exc)}")
+
+
+@router.post("/nwc/pay")
+async def execute_nwc_payment(req: NWCPayRequest, db: Session = Depends(get_db)):
+    """Novel Bitcoin Innovation: Execute autonomous M2M Lightning payment over Nostr Wallet Connect (NIP-47).
+    Emits signed kind: 23194 request event, verifies kind: 23195 response event, and checks preimage invariant.
+    """
+    from backend.app.services.machine_money.nwc import NWCClient
+    from backend.app.services.machine_money.bolt11 import encode_bolt11
+
+    # Cap check
+    if req.amount_sats > 500:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Policy violation: NWC autonomous cap is 500 sats. Quoted {req.amount_sats} sats requires operator review.",
+        )
+
+    try:
+        client = NWCClient(req.connection_uri)
+        bolt11_to_pay = req.bolt11
+        if not bolt11_to_pay:
+            bolt11_to_pay = encode_bolt11(amount_sats=req.amount_sats, description=req.memo or "NWC Autonomous Intervention")
+
+        receipt = await client.pay_invoice(bolt11=bolt11_to_pay, amount_sats=req.amount_sats)
+        return receipt
+    except ValueError as ve:
+        raise HTTPException(status_code=400, detail=str(ve))
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"NWC settlement error: {str(exc)}")
+
+
+@router.get("/routing/topology")
+def get_lightning_network_topology():
+    """Novel Bitcoin Innovation: Return multi-hop industrial Lightning Network graph topology."""
+    from backend.app.services.machine_money.routing import MultiHopRouter
+    router = MultiHopRouter()
+    return router.get_topology()
+
+
+@router.post("/routing/calculate")
+def calculate_multi_hop_route(req: RouteCalculationRequest):
+    """Novel Bitcoin Innovation: Calculate 4-hop Lightning HTLC route, Sphinx onion layers, and reverse settlement cascade."""
+    from backend.app.services.machine_money.routing import MultiHopRouter
+    router = MultiHopRouter()
+    return router.compute_route(
+        amount_sats=req.amount_sats,
+        target_vendor_id=req.target_vendor_id,
+        current_block_height=req.current_block_height,
+    )
+
+
+
+
+
+
+
