@@ -1,0 +1,148 @@
+# 🎙️ Wispr Flow Voice-Driven Development Proofs
+
+> **Official Development Artifact**: Complete proof that the **AuRAG** platform was architected, prompted, and developed using **Wispr Flow** (Voice-to-Code Dictation & Prompt Engineering).
+
+---
+
+## ⚡ Executive Summary: 100% Voice-Prompted Build
+
+During the intensive 8-day engineering sprint for **Hacker House Goa (HHGoa)**, every module of AuRAG—from low-level infrastructure and Neo4j Cypher schemas to multi-agent swarms, Bitcoin Lightning NWC protocols, and Next.js 15 frontend dashboards—was articulated and directed using **Wispr Flow voice dictation** feeding directly into AI development environments (Antigravity IDE / Cursor).
+
+### 📊 Wispr Flow Voice Metrics (from Live App Transcripts):
+* 🗣️ **Total Words Dictated**: **3,911+ words**
+* ⚡ **Dictation Velocity**: **87 words per minute (WPM)**
+* 📅 **Development Span**: **29 September 2026 – 06 October 2026**
+* 🧩 **Architectural Artifacts**: 80 Atomic Prompts logged in [`temp.md`](../temp.md)
+* 📸 **Preserved Proofs**: 12 High-Resolution Application Screenshots (see gallery below)
+
+---
+
+## 📸 Wispr Flow Visual Proof Gallery
+
+The screenshots below are raw captures from the active **Wispr Flow** dictation environment (`NSmuzic` workspace) and the **Antigravity IDE** prompt bar, documenting the sequential phases of development.
+
+---
+
+### 1. Wispr Flow Prompt Execution in Antigravity IDE
+**File**: [`ss1.png`](./ss1.png)  
+**Phase**: Phase 1 — Project Inception & Foundation  
+**Description**: Direct voice dictation captured via Wispr Flow into the Antigravity IDE agent prompt input. Dictated instructions for initial repository scaffolding, Python 3.12, Node.js, Next.js, Neo4j, MIT License with copyright `Niss54`, and high-level platform vision.
+
+<div align="center">
+  <img src="./ss1.png" width="95%" alt="Wispr Flow Voice Dictation in Antigravity IDE"/>
+</div>
+
+---
+
+### 2. Project Task Architecture & Phase Roadmap
+**File**: [`ss2.png`](./ss2.png)  
+**Date**: 29 Sep 2026, 2:45 PM  
+**Description**: Wispr Flow dictation canvas breaking down the complete project architecture: `todo.md`, `architecture.md`, `project_memory.md`, atomic task schemas, and the 9 sequential execution phases (Setup ➔ UI Scaffold ➔ Voice Input ➔ Intent ➔ Action Execution ➔ Safety ➔ Accessibility ➔ Integration ➔ Release).
+
+<div align="center">
+  <img src="./ss2.png" width="95%" alt="Wispr Flow Dictation of Task Roadmap"/>
+</div>
+
+---
+
+### 3. Machine Money Lightning & Settlement Engine
+**File**: [`ss3.png`](./ss3.png)  
+**Date**: 05 Oct 2026 (Evening Session)  
+**Description**: Voice dictation transcript detailing the Bitcoin Lightning settlement architecture: dynamic fee routing, SHA-256 cryptographic preimage proof grounding, Neo4j operational graph recording, and $0.50 (500-sat) per-transaction policy spending caps.
+
+<div align="center">
+  <img src="./ss3.png" width="95%" alt="Wispr Flow Dictation of Machine Money Engine"/>
+</div>
+
+---
+
+### 4. NIP-47 Nostr Wallet Connect (NWC) & BOLT11 Invoices
+**File**: [`ss4.png`](./ss4.png)  
+**Date**: 04 Oct 2026  
+**Description**: Voice prompts specifying BOLT11 invoice parsing without external daemon dependencies, base payment provider abstractions with mock provider fallback, NIP-47 Nostr Wallet Connect transport client, and the certified industrial vendor registry.
+
+<div align="center">
+  <img src="./ss4.png" width="95%" alt="Wispr Flow Dictation of NWC and BOLT11"/>
+</div>
+
+---
+
+### 5. Multi-Agent Swarm, Safety Guardrails & Copilot
+**File**: [`ss5.png`](./ss5.png)  
+**Date**: 03 Oct 2026  
+**Description**: Voice dictation of industrial prompt injection defense guardrails, OSHA/API 610 regulatory compliance agent rules, supervisory multi-agent copilot planning, and unified Model Context Protocol (MCP) gateway configuration.
+
+<div align="center">
+  <img src="./ss5.png" width="95%" alt="Wispr Flow Dictation of Multi-Agent Swarm and Guardrails"/>
+</div>
+
+---
+
+### 6. Corpus Indexing & Payment Provider Factory
+**File**: [`ss6.png`](./ss6.png)  
+**Date**: 04 Oct 2026  
+**Description**: Dictation records for real technical corpus indexing, retrieval validation test harness (MRR@5 and Recall@10), payment provider factory pattern, and NWC relay communication pipelines.
+
+<div align="center">
+  <img src="./ss6.png" width="95%" alt="Wispr Flow Dictation of Retrieval Harness and Provider Factory"/>
+</div>
+
+---
+
+### 7. Work Orders, Synthetic Data & Hybrid RAG
+**File**: [`ss7.png`](./ss7.png)  
+**Date**: 02 Oct 2026  
+**Description**: Voice prompting for maintenance work order APIs linked to failure events, synthetic industrial plant schematics and P&ID diagrams, and Phase 5 Hybrid RAG (dense vector + sparse BM25 + Neo4j graph traversal).
+
+<div align="center">
+  <img src="./ss7.png" width="95%" alt="Wispr Flow Dictation of Work Orders and Hybrid RAG"/>
+</div>
+
+---
+
+### 8. Industrial Telemetry, SCADA & NASA IMS Datasets
+**File**: [`ss8.png`](./ss8.png)  
+**Date**: 01 Oct 2026  
+**Description**: Voice prompts establishing the industrial telemetry streaming architecture: NASA IMS bearing run-to-failure vibration replay fixtures, synthetic SCADA sensor stream generator, and binary OPC-UA industrial protocol adapters.
+
+<div align="center">
+  <img src="./ss8.png" width="95%" alt="Wispr Flow Dictation of Telemetry Streaming and SCADA"/>
+</div>
+
+---
+
+### 9, 10 & 11. Ingestion Pipeline, Health APIs & Audit Logging
+**Files**: [`ss9.png`](./ss9.png), [`ss10.png`](./ss10.png), [`ss11.png`](./ss11.png)  
+**Date**: 01 Oct 2026  
+**Description**: Sequential dictation captures detailing Phase 3 industrial document ingestion, multimodal OCR parsers, FastAPI Kubernetes liveness/readiness probes, rule-based automation engine, and SHA-256 cryptographic audit logging.
+
+<div align="center">
+  <img src="./ss9.png" width="95%" alt="Wispr Flow Dictation of Ingestion and Health APIs"/>
+</div>
+<br/>
+<div align="center">
+  <img src="./ss10.png" width="95%" alt="Wispr Flow Dictation of Audit Logging and Rule Engine"/>
+</div>
+<br/>
+<div align="center">
+  <img src="./ss11.png" width="95%" alt="Wispr Flow Dictation of Validation and Health Check"/>
+</div>
+
+---
+
+### 12. Wispr Flow Activity Dashboard & Session Metrics
+**File**: [`ss12.png`](./ss12.png)  
+**Date**: 29 Sep 2026  
+**Description**: Official Wispr Flow analytics dashboard confirming **3,911 total words**, **87 WPM dictation speed**, and consecutive voice prompt logs for Python dependencies, deterministic lockfile pinning, Docker multi-cloud manifests, and MCP configuration.
+
+<div align="center">
+  <img src="./ss12.png" width="95%" alt="Wispr Flow Activity Dashboard 3911 Words at 87 WPM"/>
+</div>
+
+---
+
+## 🔗 Related Resources
+
+* 📜 **[Complete 80-Prompt Engineering Log (`temp.md`)](../temp.md)**: Full chronological catalog of every prompt executed across all 8 development phases.
+* ⚡ **[Judge Fast-Track Guide (`JUDGE_README.md`)](../JUDGE_README.md)**: 3-minute executive summary and 1-click live demo links.
+* 🏛️ **[System Architecture (`ARCHITECTURE.md`)](../ARCHITECTURE.md)**: Canonical system architecture diagrams and technical specifications.

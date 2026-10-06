@@ -3,6 +3,10 @@
 > **Welcome Hacker House Goa (HHGoa) Judges!**  
 > We value your time. You don't need to read 50KB of manuals or legalistic matrices.  
 > Here is everything you need to evaluate AuRAG in **under 3 minutes**.
+>
+> 🎙️ **Built 100% with Wispr Flow Voice Prompting**:  
+> The entire AuRAG platform was architected, written, and verified using **Wispr Flow** voice dictation (3,911+ words dictated at 87 WPM).  
+> 📸 **Inspect 12 Dictation Screenshots & Voice Proofs**: [**wispr-flow/**](./wispr-flow) | 📜 [Complete 80-Prompt Engineering Log](./temp.md)
 
 ---
 
@@ -185,6 +189,8 @@ npm --prefix frontend run build
 ## 📚 Technical Deep-Dive Index (Optional Appendices)
 
 If you wish to inspect our in-depth engineering documentation, architecture diagrams, and mathematical derivations:
+* 🎙️ [Wispr Flow Voice-to-Code Development Proofs & 12 Screenshots](./wispr-flow)
+* 📜 [80-Prompt Engineering Build Log](./temp.md)
 * 🏗️ [Core System Architecture & Engineering Decision Records (ADRs)](./ARCHITECTURE.md)
 * 🗺️ [Machine Money Architecture Spec](./docs/ARCHITECTURE_MACHINE_MONEY.md)
 * 📜 [Verification & Audit Evidence Report](./docs/MACHINE_MONEY_VERIFICATION.md)

@@ -32,6 +32,7 @@
   <a href="./backend"><img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/></a>
   <a href="./infra"><img src="https://img.shields.io/badge/Graph-Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white" alt="Neo4j"/></a>
   <a href="./backend/app/services/machine_money"><img src="https://img.shields.io/badge/M2M-LNbits%20%2F%20BOLT11-792EE5?style=for-the-badge&logo=lightning&logoColor=white" alt="Lightning M2M"/></a>
+  <a href="./wispr-flow"><img src="https://img.shields.io/badge/Built%20With-Wispr%20Flow%20(Voice--to--Code)-8A2BE2?style=for-the-badge&logo=soundcharts&logoColor=white" alt="Built with Wispr Flow"/></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License"/></a>
 </p>
 
@@ -46,10 +47,15 @@
 > 📌 **Direct Judge Quick Links**:
 > - ⚡ **Fast-Track Judge Guide**: **[JUDGE_README.md](./JUDGE_README.md)** (3-Minute Read)
 > - 🌐 **Live Production App**: [au-rag.vercel.app/machine-money](https://au-rag.vercel.app/machine-money)
+> - 🎙️ **Wispr Flow Development Proofs**: [**wispr-flow/**](./wispr-flow) (Full Voice-to-Code Prompting Proofs & 12 Screenshots proving 100% voice-driven AI build)
 > - 🎬 **3–5 Min Judge Demo Script**: [docs/JUDGE_DEMO_SCRIPT.md](./docs/JUDGE_DEMO_SCRIPT.md)
 > - 🔬 **Empirical Dataset Benchmark**: NASA IMS Bearing Run-to-Failure (`REPLAY-ASSET-01`)
 > - 🧪 **Test Evidence**: 100% Passing (384 automated checks total: 378 unit/integration tests passing + 6 browser E2E checks passing)
 > - 📜 **Full Technical Verification Report**: [docs/MACHINE_MONEY_VERIFICATION.md](./docs/MACHINE_MONEY_VERIFICATION.md)
+>
+> 🎙️ **PROVENANCE: Built 100% with Wispr Flow Voice Prompting**  
+> The entire AuRAG codebase (88 commits, 420+ files, multi-agent swarms, and Lightning machine-money protocols) was architected and built using **Wispr Flow** voice-to-text prompt engineering (3,911+ words dictated at 87 WPM).  
+> 📸 **Inspect Voice Transcripts & 12 Screenshots**: [**wispr-flow/**](./wispr-flow) | 📜 [Complete 80-Prompt Engineering Log](./temp.md)
 
 ---
 
