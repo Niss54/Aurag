@@ -35,7 +35,7 @@ def test_entity_free_query_preserves_all_hybrid_candidates():
 def test_explicit_year_filter_removes_conflicting_dated_records():
     candidates = {
         "FE-001": "FE-001 (2025-03-14): P-101 bearing failure.",
-        "FE-007": "FE-007 (2026-05-12): P-101 cavitation.",
+        "FE-007": "FE-007 (2026-10-02): P-101 cavitation.",
         "PROC-1": "Pump lubrication procedure with no event date.",
     }
 

@@ -19,7 +19,7 @@ describe("EvaluationDashboard", () => {
           },
           trend: [
             {
-              day: "2026-07-19",
+              day: "2026-10-04",
               total: 1,
               faithfulness: 0.5,
               context_precision: 0.7,
@@ -27,7 +27,7 @@ describe("EvaluationDashboard", () => {
               low_faithfulness_count: 1,
             },
             {
-              day: "2026-07-20",
+              day: "2026-10-04",
               total: 1,
               faithfulness: 0.7,
               context_precision: 0.8,
@@ -52,8 +52,8 @@ describe("EvaluationDashboard", () => {
               answer_relevancy: 0.8,
             },
             low_faithfulness: true,
-            created_at: "2026-07-20T10:00:00+00:00",
-            completed_at: "2026-07-20T10:00:03+00:00",
+            created_at: "2026-10-04T10:00:00+00:00",
+            completed_at: "2026-10-04T10:00:03+00:00",
             scoring_duration_ms: 3000,
             detail: null,
           },

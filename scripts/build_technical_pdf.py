@@ -448,7 +448,7 @@ def cover_page(story: list):
     story.append(
         Table(
             [
-                [P("Repository snapshot", "SmallCustom"), P("September 27, 2026", "TableCellBold")],
+                [P("Repository snapshot", "SmallCustom"), P("October 5, 2026", "TableCellBold")],
                 [P("Primary audience", "SmallCustom"), P("Engineers, architects, operators, reviewers", "TableCellBold")],
                 [P("Runtime shape", "SmallCustom"), P("Next.js + FastAPI + Neo4j + Qdrant + Redis", "TableCellBold")],
                 [P("Document status", "SmallCustom"), P("Implementation-aligned reference", "TableCellBold")],

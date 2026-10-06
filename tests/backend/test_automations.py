@@ -279,7 +279,7 @@ def test_automations_api_endpoints():
                 "score_id": "SCORE-TEST-API",
                 "reason": "Drawing out of date",
                 "incorrect_snippets": ["Rev 1 cited"],
-                "correction_notes": "Rev 2 drawing approved on 2026-08-15",
+                "correction_notes": "Rev 2 drawing approved on 2026-10-03",
             },
         )
         assert rem_res.status_code == 200

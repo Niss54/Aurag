@@ -3,12 +3,12 @@ from agents.rca import _select_rca_context
 
 def test_rca_context_keeps_only_the_dated_incident_and_direct_evidence():
     items = [
-        ("FE-007", "FE-007 (2026-02-11): P-101 cavitation"),
+        ("FE-007", "FE-007 (2026-10-01): P-101 cavitation"),
         (
             "FE-001",
             "FE-001 (2025-03-14): bearing wear caused by missed WO-1002",
         ),
-        ("WO-AI-ABC", "WO-AI-ABC (2026-07-21, Corrective, Rejected): draft"),
+        ("WO-AI-ABC", "WO-AI-ABC (2026-10-05, Corrective, Rejected): draft"),
         ("WO-1002", "WO-1002 (2025-02-01, Preventive, Overdue): lubrication"),
         ("WO-1001", "WO-1001 (2025-03-15, Corrective, Closed): bearing replacement"),
         ("PROC-001", "PROC-001 v2.1: Pump Preventive Maintenance SOP"),

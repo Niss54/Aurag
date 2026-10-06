@@ -15,11 +15,11 @@ class FakeClient:
             "results": [
                 {
                     "memory": "Operator prefers concise summaries.",
-                    "metadata": {"expires_at": "2026-08-01T00:00:00+00:00"},
+                    "metadata": {"expires_at": "2026-10-05T00:00:00+00:00"},
                 },
                 {
                     "memory": "Expired preference.",
-                    "metadata": {"expires_at": "2026-07-01T00:00:00+00:00"},
+                    "metadata": {"expires_at": "2026-10-01T00:00:00+00:00"},
                 },
                 {"memory": "Previously investigated P-101.", "metadata": {}},
             ]
@@ -35,7 +35,7 @@ def test_memory_recall_is_user_scoped_bounded_and_drops_expired_records():
     service = MemoryService(
         client=client,
         max_results=2,
-        now=lambda: datetime(2026, 7, 20, tzinfo=timezone.utc),
+        now=lambda: datetime(2026, 10, 2, tzinfo=timezone.utc),
     )
 
     memories = service.recall("user-1", "P-101", limit=2)
@@ -53,7 +53,7 @@ def test_memory_write_carries_session_and_expiration_metadata():
     service = MemoryService(
         client=client,
         ttl_days=30,
-        now=lambda: datetime(2026, 7, 20, tzinfo=timezone.utc),
+        now=lambda: datetime(2026, 10, 2, tzinfo=timezone.utc),
     )
 
     written = service.remember(
@@ -68,7 +68,7 @@ def test_memory_write_carries_session_and_expiration_metadata():
     assert call["user_id"] == "user-1"
     assert call["run_id"] == "session-9"
     assert call["metadata"]["source"] == "aurag_chat"
-    assert call["metadata"]["expires_at"] == "2026-08-19T00:00:00+00:00"
+    assert call["metadata"]["expires_at"] == "2026-11-01T00:00:00+00:00"
 
 
 def test_memory_provider_failures_do_not_break_chat():

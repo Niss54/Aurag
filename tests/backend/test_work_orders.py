@@ -49,7 +49,7 @@ def test_create_draft_persists_equipment_and_predictive_event_links():
         description="Bearing pattern match",
         recommended_action="Lubricate and inspect bearing.",
         actor="aurag",
-        created_at="2026-07-20T12:00:00+00:00",
+        created_at="2026-10-04T12:00:00+00:00",
     )
 
     query, params = session.calls[0]
@@ -108,7 +108,7 @@ def test_update_work_order_returns_canonical_relationship_context():
                     {
                         "id": "WOD-1",
                         "decision": "edit",
-                        "created_at": "2026-07-20T12:01:00+00:00",
+                        "created_at": "2026-10-04T12:01:00+00:00",
                     }
                 ],
             },
@@ -122,7 +122,7 @@ def test_update_work_order_returns_canonical_relationship_context():
         description="Edited description",
         recommended_action="Edited action",
         actor="operator-1",
-        updated_at="2026-07-20T12:01:00+00:00",
+        updated_at="2026-10-04T12:01:00+00:00",
     )
 
     assert result["equipment"] == "P-101"
@@ -163,7 +163,7 @@ def test_accept_and_reject_are_audited_and_transition_checked():
                     {
                         "id": "WOD-1",
                         "decision": "accept",
-                        "created_at": "2026-07-20T12:05:00+00:00",
+                        "created_at": "2026-10-04T12:05:00+00:00",
                     }
                 ],
             },
@@ -177,7 +177,7 @@ def test_accept_and_reject_are_audited_and_transition_checked():
         actor="operator-1",
         expected_version=1,
         reason=None,
-        decided_at="2026-07-20T12:05:00+00:00",
+        decided_at="2026-10-04T12:05:00+00:00",
     )
 
     assert result["status"] == "Approved"

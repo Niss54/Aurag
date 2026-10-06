@@ -3,7 +3,7 @@
 > [!WARNING]
 > **HISTORICAL VERIFICATION SNAPSHOT — NOT THE CURRENT RELEASE STATE**
 >
-> This document is preserved for historical audit purposes only (capturing the early Phase 1 baseline from September 27, 2026).
+> This document is preserved for historical audit purposes only (capturing the early Phase 1 baseline from October 5, 2026).
 > For the current authoritative submission status and verified metrics, consult:
 > - [CURRENT_TEST_SNAPSHOT.md](../CURRENT_TEST_SNAPSHOT.md) — 384 Automated Checks Passing (378 Unit/Integration + 6 Browser E2E)
 > - [RAGAS_FINAL_VERIFICATION.md](../RAGAS_FINAL_VERIFICATION.md) — 24/24 Evaluation Pipeline Verification
@@ -12,7 +12,7 @@
 > - [JUDGE_DEMO_SCRIPT.md](../JUDGE_DEMO_SCRIPT.md) — Authoritative Step-by-Step Evaluation Walkthrough
 
 **Environment:** local Windows host plus Linux Docker  
-**Historical Snapshot Date:** September 27, 2026  
+**Historical Snapshot Date:** October 5, 2026  
 **Acceptance image:** `aurag:acceptance`
 
 ## Passed gates

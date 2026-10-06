@@ -34,9 +34,9 @@ _FALLBACK_WORK_ORDERS = {
         "description": "Bearing vibration excursion inspection on pump P-101A",
         "recommended_action": "Replace outboard bearing assembly and inspect alignment",
         "version": 1,
-        "created_at": "2026-09-18T10:00:00Z",
-        "updated_at": "2026-09-18T10:00:00Z",
-        "date": "2026-09-18",
+        "created_at": "2026-09-30T10:00:00Z",
+        "updated_at": "2026-09-30T10:00:00Z",
+        "date": "2026-09-30",
         "source": "predictive_intelligence",
         "created_by": "local-operator",
         "equipment": "P-101A",
@@ -51,9 +51,9 @@ _FALLBACK_WORK_ORDERS = {
         "description": "Quarterly mechanical seal inspection and flush cycle verification",
         "recommended_action": "Flush seal pot, check barrier fluid pressure, replace primary O-ring",
         "version": 2,
-        "created_at": "2026-09-20T08:30:00Z",
-        "updated_at": "2026-09-21T14:15:00Z",
-        "date": "2026-09-20",
+        "created_at": "2026-10-01T08:30:00Z",
+        "updated_at": "2026-10-02T14:15:00Z",
+        "date": "2026-10-01",
         "source": "predictive_intelligence",
         "created_by": "operator-anil",
         "equipment": "P-101B",
@@ -68,9 +68,9 @@ _FALLBACK_WORK_ORDERS = {
         "description": "Pressure safety valve lift check and calibration on discharge line",
         "recommended_action": "Isolate line, bench test pop pressure to 12.5 bar, certify tag",
         "version": 1,
-        "created_at": "2026-09-25T11:00:00Z",
-        "updated_at": "2026-09-25T11:00:00Z",
-        "date": "2026-09-25",
+        "created_at": "2026-10-03T11:00:00Z",
+        "updated_at": "2026-10-03T11:00:00Z",
+        "date": "2026-10-03",
         "source": "predictive_intelligence",
         "created_by": "local-operator",
         "equipment": "PRV-04",
@@ -177,7 +177,7 @@ _FULL_EQUIPMENT_DATA = {
     "P-101": {
         "failure_events": [
             {"id": "FE-001", "date": "2025-03-14", "symptom": "High vibration (>7 mm/s RMS) and elevated bearing temperature on P-101", "root_cause": "Drive-end bearing wear caused by lubrication interval lapse - scheduled quarterly greasing (WO-1002) was never completed"},
-            {"id": "FE-007", "date": "2026-02-11", "symptom": "Broadband vibration rose while bearing temperature remained normal during low tank level operation in tank farm TK-101", "root_cause": "Suction starvation caused incipient cavitation due to violation of minimum tank level operating limit"},
+            {"id": "FE-007", "date": "2026-10-01", "symptom": "Broadband vibration rose while bearing temperature remained normal during low tank level operation in tank farm TK-101", "root_cause": "Suction starvation caused incipient cavitation due to violation of minimum tank level operating limit"},
         ],
         "work_orders": [
             {"id": "WO-1001", "date": "2025-03-15", "type": "Corrective", "status": "Closed", "description": "Replaced drive-end bearing and re-greased per OEM spec"},
@@ -191,7 +191,7 @@ _FULL_EQUIPMENT_DATA = {
         ],
         "chunks": [
             {"id": "DOC-LOG-001-C002", "text": "FE-001 — P-101 Drive-End Bearing Failure (2025-03-14). Symptom: Excessive vibration (>7 mm/s RMS) and drive-end bearing housing temperature rising above 85°C. Root cause: Bearing cage degradation due to missed lubrication interval WO-1002. Resolution: WO-1001 replaced bearing."},
-            {"id": "DOC-LOG-001-C008", "text": "FE-007 — P-101 Incipient Cavitation (2026-02-11). Broadband vibration excursion during low tank level operation in tank farm TK-101. Root cause: Suction starvation."},
+            {"id": "DOC-LOG-001-C008", "text": "FE-007 — P-101 Incipient Cavitation (2026-10-01). Broadband vibration excursion during low tank level operation in tank farm TK-101. Root cause: Suction starvation."},
             {"id": "DOC-SOP-001-C001", "text": "DOC-SOP-001: Centrifugal Pump Preventive Maintenance SOP v2.1. Applies to P-101 and P-102 (Feed Pumps, Train A), Unit 100 Feed Section."},
             {"id": "DOC-SOP-001-C004", "text": "DOC-SOP-001 Section 5: Consequence of Deferral: Skipping or delaying quarterly lubrication service is the single most common precursor to drive-end bearing wear on P-101/P-102."},
         ],
@@ -210,17 +210,17 @@ _FULL_EQUIPMENT_DATA = {
     },
     "P-102": {
         "failure_events": [
-            {"id": "FE-006", "date": "2026-01-18", "symptom": "Visible mechanical seal leak detected during routine operator rounds on standby pump P-102", "root_cause": "Mechanical seal degradation after exceeding rated service life without replacement"},
+            {"id": "FE-006", "date": "2026-09-30", "symptom": "Visible mechanical seal leak detected during routine operator rounds on standby pump P-102", "root_cause": "Mechanical seal degradation after exceeding rated service life without replacement"},
         ],
         "work_orders": [
-            {"id": "WO-1010", "date": "2026-01-19", "type": "Corrective", "status": "Closed", "description": "Replaced mechanical seal on P-102 per DOC-SOP-001"},
+            {"id": "WO-1010", "date": "2026-09-30", "type": "Corrective", "status": "Closed", "description": "Replaced mechanical seal on P-102 per DOC-SOP-001"},
         ],
         "clauses": [],
         "procedures": [
             {"id": "PROC-001", "title": "Centrifugal Pump Preventive Maintenance SOP", "version": "2.1"},
         ],
         "chunks": [
-            {"id": "DOC-LOG-001-C007", "text": "FE-006 — P-102 Mechanical Seal Leak (2026-01-18). Visible mechanical seal leak detected during operator rounds. Root Cause: Mechanical seal degradation after exceeding rated service life without replacement per DOC-SOP-001 Section 3. WO-1010 replaced mechanical seal."},
+            {"id": "DOC-LOG-001-C007", "text": "FE-006 — P-102 Mechanical Seal Leak (2026-09-30). Visible mechanical seal leak detected during operator rounds. Root Cause: Mechanical seal degradation after exceeding rated service life without replacement per DOC-SOP-001 Section 3. WO-1010 replaced mechanical seal."},
             {"id": "DOC-SOP-001-C002", "text": "DOC-SOP-001 Section 3: Mechanical seal visual inspection monthly; mechanical seal replacement per OEM rated service life or on leak detection."},
         ],
     },
@@ -312,7 +312,7 @@ _FULL_EQUIPMENT_DATA = {
     "R-601": {
         "failure_events": [],
         "work_orders": [
-            {"id": "WO-1011", "date": "2026-02-10", "type": "Preventive", "status": "Closed", "description": "Catalyst bed pressure-drop inspection on reactor R-601"},
+            {"id": "WO-1011", "date": "2026-10-01", "type": "Preventive", "status": "Closed", "description": "Catalyst bed pressure-drop inspection on reactor R-601"},
         ],
         "clauses": [
             {"id": "FACT1948-S37", "source": "Factories Act 1948", "text": "Where manufacturing process produces flammable gas, vapour or dust likely to explode, all practicable measures shall be taken by effective enclosure and exclusion of ignition sources."},
@@ -323,7 +323,7 @@ _FULL_EQUIPMENT_DATA = {
     "TK-101": {
         "failure_events": [],
         "work_orders": [
-            {"id": "WO-1012", "date": "2026-04-05", "type": "Preventive", "status": "Open", "description": "Scheduled tank integrity inspection (API-653 style)"},
+            {"id": "WO-1012", "date": "2026-10-02", "type": "Preventive", "status": "Open", "description": "Scheduled tank integrity inspection (API-653 style)"},
         ],
         "clauses": [],
         "procedures": [],
@@ -333,11 +333,11 @@ _FULL_EQUIPMENT_DATA = {
     },
     "REPLAY-ASSET-01": {
         "failure_events": [
-            {"id": "FE-001", "date": "2026-02-14", "symptom": "NASA IMS Bearing 1 outer race BPFO harmonic spalling (5.42 mm/s radial excursion)", "root_cause": "Accelerated roller-bearing race degradation under 6,000 lbs radial load"},
+            {"id": "FE-001", "date": "2026-09-29", "symptom": "NASA IMS Bearing 1 outer race BPFO harmonic spalling (5.42 mm/s radial excursion)", "root_cause": "Accelerated roller-bearing race degradation under 6,000 lbs radial load"},
         ],
         "work_orders": [
-            {"id": "WO-1002", "date": "2026-02-14", "type": "Emergency Overhaul", "status": "Overdue", "description": "Overhaul bearing assembly, laser alignment, and lubrication replacement for REPLAY-ASSET-01"},
-            {"id": "WO-2026-P101", "date": "2026-02-14", "type": "Corrective", "status": "FUNDED", "description": "Emergency Outboard Bearing Overhaul funded via Sovereign Lightning micro-payment"},
+            {"id": "WO-1002", "date": "2026-09-29", "type": "Emergency Overhaul", "status": "Overdue", "description": "Overhaul bearing assembly, laser alignment, and lubrication replacement for REPLAY-ASSET-01"},
+            {"id": "WO-2026-P101", "date": "2026-09-29", "type": "Corrective", "status": "FUNDED", "description": "Emergency Outboard Bearing Overhaul funded via Sovereign Lightning micro-payment"},
         ],
         "clauses": [
             {"id": "ISO-10816-3", "source": "ISO 10816-3", "text": "ISO 10816-3 Zone C threshold (4.5 mm/s): Vibration severity exceeds acceptable continuous operation limit. Mandatory corrective overhaul required."},
@@ -384,7 +384,7 @@ _FULL_PERSON_DATA = {
         "work_orders": [
             {"id": "WO-1004", "date": "2025-04-01", "type": "Preventive", "status": "Closed", "description": "Standby compressor C-202 functional test"},
             {"id": "WO-1007", "date": "2025-07-01", "type": "Preventive", "status": "Overdue", "description": "Scheduled annual PSV calibration for PSV-701"},
-            {"id": "WO-1010", "date": "2026-01-19", "type": "Corrective", "status": "Closed", "description": "Replaced mechanical seal on P-102"},
+            {"id": "WO-1010", "date": "2026-09-30", "type": "Corrective", "status": "Closed", "description": "Replaced mechanical seal on P-102"},
         ],
         "chunks": [
             {"id": "DOC-LOG-001-C007", "text": "Instrumentation Technician Suresh Patil executed mechanical seal replacement WO-1010 on P-102."},
@@ -410,9 +410,9 @@ class FallbackNeo4jSession:
                         "description": kwargs.get("description", ""),
                         "recommended_action": kwargs.get("recommended_action", ""),
                         "version": kwargs.get("version", 1),
-                        "created_at": kwargs.get("created_at", "2026-09-28T00:00:00Z"),
-                        "updated_at": kwargs.get("created_at", "2026-09-28T00:00:00Z"),
-                        "date": kwargs.get("created_at", "2026-09-28T00:00:00Z")[:10],
+                        "created_at": kwargs.get("created_at", "2026-10-05T00:00:00Z"),
+                        "updated_at": kwargs.get("created_at", "2026-10-05T00:00:00Z"),
+                        "date": kwargs.get("created_at", "2026-10-05T00:00:00Z")[:10],
                         "source": "predictive_intelligence",
                         "created_by": kwargs.get("actor", "local-operator"),
                         "equipment": kwargs.get("equipment_tag", "P-101A"),
@@ -431,9 +431,9 @@ class FallbackNeo4jSession:
                         "description": "",
                         "recommended_action": "",
                         "version": kwargs.get("expected_version", 1),
-                        "created_at": "2026-09-28T00:00:00Z",
-                        "updated_at": "2026-09-28T00:00:00Z",
-                        "date": "2026-09-28",
+                        "created_at": "2026-10-05T00:00:00Z",
+                        "updated_at": "2026-10-05T00:00:00Z",
+                        "date": "2026-10-05",
                         "source": "predictive_intelligence",
                         "created_by": "local-operator",
                         "equipment": "P-101A",
@@ -444,14 +444,14 @@ class FallbackNeo4jSession:
                 wo = _FALLBACK_WORK_ORDERS[wo_id]
                 wo["status"] = kwargs.get("next_status", "Approved")
                 wo["version"] = kwargs.get("next_version", wo["version"] + 1)
-                wo["updated_at"] = kwargs.get("decided_at", "2026-09-28T00:00:00Z")
+                wo["updated_at"] = kwargs.get("decided_at", "2026-10-05T00:00:00Z")
                 wo["updated_by"] = kwargs.get("actor", "local-operator")
                 wo.setdefault("decisions", []).append({
                     "id": kwargs.get("decision_id", "WOD-001"),
                     "decision": kwargs.get("decision", "accept"),
                     "actor": kwargs.get("actor", "local-operator"),
                     "reason": kwargs.get("reason"),
-                    "created_at": kwargs.get("decided_at", "2026-09-28T00:00:00Z"),
+                    "created_at": kwargs.get("decided_at", "2026-10-05T00:00:00Z"),
                     "from_version": kwargs.get("expected_version", 1),
                     "to_version": kwargs.get("next_version", 2),
                 })
@@ -466,9 +466,9 @@ class FallbackNeo4jSession:
                         "description": kwargs.get("description", ""),
                         "recommended_action": kwargs.get("recommended_action", ""),
                         "version": kwargs.get("expected_version", 1) + 1,
-                        "created_at": "2026-09-28T00:00:00Z",
-                        "updated_at": kwargs.get("updated_at", "2026-09-28T00:00:00Z"),
-                        "date": "2026-09-28",
+                        "created_at": "2026-10-05T00:00:00Z",
+                        "updated_at": kwargs.get("updated_at", "2026-10-05T00:00:00Z"),
+                        "date": "2026-10-05",
                         "source": "predictive_intelligence",
                         "created_by": kwargs.get("actor", "local-operator"),
                         "equipment": "P-101A",
@@ -482,7 +482,7 @@ class FallbackNeo4jSession:
                     wo["recommended_action"] = kwargs.get("recommended_action", wo.get("recommended_action", ""))
                     wo["status"] = "In Review"
                     wo["version"] = wo["version"] + 1
-                    wo["updated_at"] = kwargs.get("updated_at", "2026-09-28T00:00:00Z")
+                    wo["updated_at"] = kwargs.get("updated_at", "2026-10-05T00:00:00Z")
                     wo["updated_by"] = kwargs.get("actor", "local-operator")
 
         class FallbackResult:
@@ -698,11 +698,11 @@ class FallbackNeo4jSession:
                         "similarity": kwargs.get("similarity", 0.85),
                         "symptom": kwargs.get("symptom", "High vibration and elevated bearing temperature on P-101"),
                         "reading_json": kwargs.get("reading_json", "{}"),
-                        "detected_at": kwargs.get("detected_at", "2026-09-28T00:00:00Z"),
+                        "detected_at": kwargs.get("detected_at", "2026-10-05T00:00:00Z"),
                         "status": "unread",
                         "title": kwargs.get("title", "P-101A requires attention"),
                         "severity": "high",
-                        "created_at": kwargs.get("detected_at", "2026-09-28T00:00:00Z"),
+                        "created_at": kwargs.get("detected_at", "2026-10-05T00:00:00Z"),
                         "description": kwargs.get("symptom", "Elevated bearing vibration excursion"),
                     }
                     return [
@@ -911,7 +911,7 @@ class FallbackNeo4jSession:
                     if "day" in query.lower():
                         return [
                             {
-                                "day": "2026-09-27",
+                                "day": "2026-10-04",
                                 "total": 10,
                                 "faithfulness": 0.94,
                                 "context_precision": 0.91,
@@ -943,8 +943,8 @@ class FallbackNeo4jSession:
                         "context_precision": 0.91,
                         "answer_relevancy": 0.95,
                         "low_faithfulness": False,
-                        "created_at": "2026-09-27T12:00:00Z",
-                        "completed_at": "2026-09-27T12:00:02Z",
+                        "created_at": "2026-10-04T12:00:00Z",
+                        "completed_at": "2026-10-04T12:00:02Z",
                         "scoring_duration_ms": 1850,
                         "detail": None,
                     }

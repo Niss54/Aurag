@@ -90,7 +90,7 @@ prior upset, not caught during the post-upset inspection.
 
 ---
 
-## FE-006 — P-102 Mechanical Seal Leak (2026-01-18)
+## FE-006 — P-102 Mechanical Seal Leak (2026-09-30)
 
 **Symptom:** Visible mechanical seal leak detected during routine operator
 rounds.
@@ -99,10 +99,10 @@ rounds.
 service life without replacement (see DOC-SOP-001 Section 3).
 
 **Corrective Action:** WO-1010 — mechanical seal replacement, closed
-2026-01-19.
+2026-09-30.
 ## FE-007 — P-101 incipient cavitation
 
-**Date:** 2026-02-11  
+**Date:** 2026-10-01  
 **Equipment:** P-101  
 **Symptom:** Broadband vibration rose while bearing temperature remained near normal during low tank level operation.  
 **Root cause:** Suction starvation caused incipient cavitation; the low-level operating limit was not maintained.

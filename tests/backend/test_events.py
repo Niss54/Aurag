@@ -42,7 +42,7 @@ def test_predictive_event_is_idempotent_and_links_failure_equipment():
         similarity=0.93,
         symptom="Bearing vibration",
         reading={"vibration_mm_s": 7.5},
-        detected_at="2026-07-20T12:00:00+00:00",
+        detected_at="2026-10-04T12:00:00+00:00",
     )
 
     query, params = session.calls[0]
@@ -56,13 +56,13 @@ def test_predictive_event_is_idempotent_and_links_failure_equipment():
 
 def test_predictive_event_identity_is_stable_inside_cooldown_bucket():
     first = predictive_event_identity(
-        "P-101", "FE-001", "2026-07-21T08:00:00+00:00", 1800
+        "P-101", "FE-001", "2026-10-05T08:00:00+00:00", 1800
     )
     retry = predictive_event_identity(
-        "P-101", "FE-001", "2026-07-21T08:10:00+00:00", 1800
+        "P-101", "FE-001", "2026-10-05T08:10:00+00:00", 1800
     )
     later = predictive_event_identity(
-        "P-101", "FE-001", "2026-07-21T08:31:00+00:00", 1800
+        "P-101", "FE-001", "2026-10-05T08:31:00+00:00", 1800
     )
 
     assert retry == first
@@ -78,7 +78,7 @@ def test_notification_payload_has_stable_event_id_and_action_link():
             "similarity": 0.93,
             "symptom": "Bearing vibration",
             "status": "unread",
-            "detected_at": "2026-07-20T12:00:00+00:00",
+            "detected_at": "2026-10-04T12:00:00+00:00",
         }
     )
 
@@ -92,7 +92,7 @@ def test_notification_payload_has_stable_event_id_and_action_link():
         "failure_event_id": "FE-001",
         "similarity": 0.93,
         "status": "unread",
-        "detected_at": "2026-07-20T12:00:00+00:00",
+        "detected_at": "2026-10-04T12:00:00+00:00",
         "action_href": "/predictive-watch?event=PE-1",
     }
 

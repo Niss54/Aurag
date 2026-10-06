@@ -145,7 +145,7 @@ test("evaluation trend and filters remain usable without page overflow", async (
         },
         trend: [
           {
-            day: "2026-07-20",
+            day: "2026-10-04",
             total: 1,
             faithfulness: 0.72,
             context_precision: 0.79,
@@ -153,7 +153,7 @@ test("evaluation trend and filters remain usable without page overflow", async (
             low_faithfulness_count: 1,
           },
           {
-            day: "2026-07-21",
+            day: "2026-10-05",
             total: 1,
             faithfulness: 0.84,
             context_precision: 0.83,
@@ -201,7 +201,7 @@ test("operator can review, edit, and accept a persisted work order", async ({
 }) => {
   let current = {
     id: "WO-AI-1",
-    date: "2026-07-21",
+    date: "2026-10-05",
     type: "Corrective",
     status: "Draft",
     equipment: "P-101",

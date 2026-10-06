@@ -5,7 +5,7 @@ import WorkOrderEditor from "./WorkOrderEditor";
 
 const workOrder = {
   id: "WO-AI-1",
-  date: "2026-07-20",
+  date: "2026-10-04",
   type: "Corrective",
   status: "Draft",
   description: "Bearing pattern match",
@@ -14,8 +14,8 @@ const workOrder = {
   version: 1,
   equipment: "P-101",
   predictive_event_id: "PE-1",
-  created_at: "2026-07-20T12:00:00+00:00",
-  updated_at: "2026-07-20T12:00:00+00:00",
+  created_at: "2026-10-04T12:00:00+00:00",
+  updated_at: "2026-10-04T12:00:00+00:00",
   decisions: [],
 };
 

@@ -15,9 +15,9 @@ UNWIND [
   {id: 'WO-1007', date: '2025-07-01', type: 'Preventive', status: 'Overdue', equipment: 'PSV-701', person: 'PER-004', description: 'Scheduled annual PSV calibration'},
   {id: 'WO-1008', date: '2025-10-06', type: 'Corrective', status: 'Closed',  equipment: 'T-501',   person: 'PER-002', description: 'Replaced damaged trays, sections 12-15'},
   {id: 'WO-1009', date: '2025-09-15', type: 'Inspection', status: 'Closed',  equipment: 'T-501',   person: 'PER-001', description: 'Post-upset internal inspection following a process trip'},
-  {id: 'WO-1010', date: '2026-01-19', type: 'Corrective', status: 'Closed',  equipment: 'P-102',   person: 'PER-004', description: 'Replaced mechanical seal'},
-  {id: 'WO-1011', date: '2026-02-10', type: 'Preventive', status: 'Closed',  equipment: 'R-601',   person: 'PER-005', description: 'Catalyst bed pressure-drop inspection'},
-  {id: 'WO-1012', date: '2026-04-05', type: 'Preventive', status: 'Open',    equipment: 'TK-101',  person: 'PER-006', description: 'Scheduled tank integrity inspection (API-653 style)'}
+  {id: 'WO-1010', date: '2026-09-30', type: 'Corrective', status: 'Closed',  equipment: 'P-102',   person: 'PER-004', description: 'Replaced mechanical seal'},
+  {id: 'WO-1011', date: '2026-10-01', type: 'Preventive', status: 'Closed',  equipment: 'R-601',   person: 'PER-005', description: 'Catalyst bed pressure-drop inspection'},
+  {id: 'WO-1012', date: '2026-10-02', type: 'Preventive', status: 'Open',    equipment: 'TK-101',  person: 'PER-006', description: 'Scheduled tank integrity inspection (API-653 style)'}
 ] AS row
 MERGE (w:WorkOrder {id: row.id})
 SET w.date = row.date,

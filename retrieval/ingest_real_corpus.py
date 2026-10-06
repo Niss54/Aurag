@@ -42,11 +42,11 @@ PLANT_CHUNKS = [
     ),
     (
         "DOC-LOG-001-C007",
-        "FE-006 — P-102 Mechanical Seal Leak (2026-01-18). Symptom: Visible mechanical seal leak detected on standby pump P-102 during operator rounds. Root Cause: Mechanical seal degradation after exceeding rated service life without replacement per DOC-SOP-001 Section 3. Corrective Action: WO-1010 mechanical seal replacement closed 2026-01-19 by Suresh Patil.",
+        "FE-006 — P-102 Mechanical Seal Leak (2026-09-30). Symptom: Visible mechanical seal leak detected on standby pump P-102 during operator rounds. Root Cause: Mechanical seal degradation after exceeding rated service life without replacement per DOC-SOP-001 Section 3. Corrective Action: WO-1010 mechanical seal replacement closed 2026-09-30 by Suresh Patil.",
     ),
     (
         "DOC-LOG-001-C008",
-        "FE-007 — P-101 Incipient Cavitation (2026-02-11). Symptom: Broadband vibration rose while bearing temperature remained normal during low tank level operation in tank farm TK-101. Root Cause: Suction starvation caused incipient cavitation due to violation of minimum tank level operating limit.",
+        "FE-007 — P-101 Incipient Cavitation (2026-10-01). Symptom: Broadband vibration rose while bearing temperature remained normal during low tank level operation in tank farm TK-101. Root Cause: Suction starvation caused incipient cavitation due to violation of minimum tank level operating limit.",
     ),
     (
         "DOC-SOP-001-C001",

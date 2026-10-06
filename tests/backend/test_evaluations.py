@@ -47,7 +47,7 @@ def test_create_evaluation_persists_full_answer_metadata_as_json():
         citations=["FE-001", "WO-1002"],
         graph_paths=[{"type": "FailureEvent", "id": "FE-001"}],
         retrieved_context=[("FE-001", "failure evidence")],
-        created_at="2026-07-20T10:00:00+00:00",
+        created_at="2026-10-04T10:00:00+00:00",
     )
 
     assert created["score_id"] == "score-1"
@@ -74,8 +74,8 @@ def test_update_and_deserialize_evaluation_scores():
                 "context_precision": 0.7,
                 "answer_relevancy": 0.9,
                 "low_faithfulness": False,
-                "created_at": "2026-07-20T10:00:00+00:00",
-                "completed_at": "2026-07-20T10:00:03+00:00",
+                "created_at": "2026-10-04T10:00:00+00:00",
+                "completed_at": "2026-10-04T10:00:03+00:00",
                 "scoring_duration_ms": 3000,
                 "detail": None,
             }
@@ -89,7 +89,7 @@ def test_update_and_deserialize_evaluation_scores():
         scores={"faithfulness": 0.8, "context_precision": 0.7, "answer_relevancy": 0.9},
         low_faithfulness=False,
         duration_ms=3000,
-        completed_at="2026-07-20T10:00:03+00:00",
+        completed_at="2026-10-04T10:00:03+00:00",
     )
     result = deserialize_evaluation(session.record["evaluation"])
 
@@ -163,7 +163,7 @@ def test_database_summary_aggregates_complete_history():
             _Result(
                 rows=[
                     {
-                        "day": "2026-07-20",
+                        "day": "2026-10-04",
                         "total": 4,
                         "faithfulness": 0.75,
                         "context_precision": 0.8,
@@ -171,7 +171,7 @@ def test_database_summary_aggregates_complete_history():
                         "low_count": 1,
                     },
                     {
-                        "day": "2026-07-19",
+                        "day": "2026-10-04",
                         "total": 3,
                         "faithfulness": 0.7,
                         "context_precision": 0.76,
@@ -189,7 +189,7 @@ def test_database_summary_aggregates_complete_history():
     assert summary["status_counts"] == {"scored": 340, "error": 10}
     assert summary["low_faithfulness_count"] == 12
     assert summary["averages"]["faithfulness"] == 0.812
-    assert [point["day"] for point in summary["trend"]] == ["2026-07-19", "2026-07-20"]
+    assert [point["day"] for point in summary["trend"]] == ["2026-10-04", "2026-10-04"]
     assert summary["trend"][1]["low_faithfulness_count"] == 1
 
 

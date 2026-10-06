@@ -75,7 +75,7 @@ The following payment execution was produced by the live end-to-end telemetry-to
   "payment_hash": "81ebd7332d750fe868ef8777b6fa43e0b608b01014f1aa4fe6d02a6d3c92d421",
   "preimage": "eaa9f31cebb48b2c50cfeda77ddae8789b1b0c8486eff6b4ecc1c55a51542c04",
   "fee_sats": 0,
-  "paid_at": "2026-09-27T00:54:46.128Z",
+  "paid_at": "2026-10-04T00:54:46.128Z",
   "idempotency_key": "idemp-plant-mumbai-01-P-101A-bearing-inspection-EVT-VIB-001",
   "work_order_id": "WO-2026-P101",
   "policy_decision": {
@@ -129,7 +129,7 @@ WHERE payment_id = 'PAY-2026-P101-7fa3b9';
 
 | payment_id | amount_sats | status | work_order_id | idempotency_key | paid_at |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `PAY-2026-P101-7fa3b9` | `250` | `SETTLED` | `WO-2026-P101` | `idemp-plant-mumbai-01-P-101A-...` | `2026-09-27 00:54:46` |
+| `PAY-2026-P101-7fa3b9` | `250` | `SETTLED` | `WO-2026-P101` | `idemp-plant-mumbai-01-P-101A-...` | `2026-10-04 00:54:46` |
 
 ---
 

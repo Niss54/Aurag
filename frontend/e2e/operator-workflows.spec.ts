@@ -64,7 +64,7 @@ test("workspace shell persists while route titles and nested navigation update",
 test("operator can review, edit, and accept a persisted work order", async ({ page }) => {
   let current = {
     id: "WO-AI-1",
-    date: "2026-07-21",
+    date: "2026-10-05",
     type: "Corrective",
     status: "Draft",
     equipment: "P-101",
