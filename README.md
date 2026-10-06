@@ -55,7 +55,7 @@
 >
 > 🎙️ **PROVENANCE: Built 100% with Wispr Flow Voice Prompting**  
 > The entire AuRAG codebase (88 commits, 420+ files, multi-agent swarms, and Lightning machine-money protocols) was architected and built using **Wispr Flow** voice-to-text prompt engineering (3,911+ words dictated at 87 WPM).  
-> 📸 **Inspect Voice Transcripts & 12 Screenshots**: [**wispr-flow/**](./wispr-flow) | 📜 [Complete 80-Prompt Engineering Log](./temp.md)
+> 📸 **Inspect Voice Transcripts & 12 Screenshots**: [**wispr-flow/**](./wispr-flow) (Full Voice Dictation Transcripts & High-Res Gallery)
 
 ---
 

@@ -12,7 +12,7 @@ During the intensive 8-day engineering sprint for **Hacker House Goa (HHGoa)**, 
 * 🗣️ **Total Words Dictated**: **3,911+ words**
 * ⚡ **Dictation Velocity**: **87 words per minute (WPM)**
 * 📅 **Development Span**: **29 September 2026 – 06 October 2026**
-* 🧩 **Architectural Artifacts**: 80 Atomic Prompts logged in [`temp.md`](../temp.md)
+* 🧩 **Architectural Scope**: 80 Atomic Voice Prompts orchestrated into 8 sequential development phases
 * 📸 **Preserved Proofs**: 12 High-Resolution Application Screenshots (see gallery below)
 
 ---
@@ -143,6 +143,5 @@ The screenshots below are raw captures from the active **Wispr Flow** dictation 
 
 ## 🔗 Related Resources
 
-* 📜 **[Complete 80-Prompt Engineering Log (`temp.md`)](../temp.md)**: Full chronological catalog of every prompt executed across all 8 development phases.
 * ⚡ **[Judge Fast-Track Guide (`JUDGE_README.md`)](../JUDGE_README.md)**: 3-minute executive summary and 1-click live demo links.
 * 🏛️ **[System Architecture (`ARCHITECTURE.md`)](../ARCHITECTURE.md)**: Canonical system architecture diagrams and technical specifications.
