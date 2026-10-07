@@ -143,5 +143,6 @@ The screenshots below are raw captures from the active **Wispr Flow** dictation 
 
 ## 🔗 Related Resources
 
+* 📜 **[Wispr Flow Evidence Dossier (`WISPR_EVIDENCE.md`)](../WISPR_EVIDENCE.md)**: Exhaustive 9-point proof report, prompt log, mapping table, and testing evidence.
 * ⚡ **[Judge Fast-Track Guide (`JUDGE_README.md`)](../JUDGE_README.md)**: 3-minute executive summary and 1-click live demo links.
 * 🏛️ **[System Architecture (`ARCHITECTURE.md`)](../ARCHITECTURE.md)**: Canonical system architecture diagrams and technical specifications.

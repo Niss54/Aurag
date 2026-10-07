@@ -6,7 +6,7 @@
 >
 > 🎙️ **Built 100% with Wispr Flow Voice Prompting**:  
 > The entire AuRAG platform was architected, written, and verified using **Wispr Flow** voice dictation (3,911+ words dictated at 87 WPM).  
-> 📸 **Inspect 12 Dictation Screenshots & Voice Proofs**: [**wispr-flow/**](./wispr-flow) (Full Voice Dictation Transcripts & High-Res Gallery)
+> 📜 **Complete Evidence Dossier**: [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | 📸 **Inspect 12 Screenshots**: [**wispr-flow/**](./wispr-flow)
 
 ---
 
