@@ -40,6 +40,23 @@
 
 </div>
 
+## 🎙️ WISPR FLOW DEVELOPMENT EVIDENCE
+
+> **PROVENANCE: Built 100% with Wispr Flow Voice Prompting**  
+> The entire AuRAG platform (90 commits, 420+ files, multi-agent swarms, and Lightning machine-money protocols) was architected, written, and verified using **Wispr Flow** voice-to-text prompt engineering (**3,911+ words dictated at 87 WPM**).
+
+```
+Evidence Pack ➔ Screenshots ➔ Prompt Log ➔ Commit Mapping ➔ Live Demo
+```
+
+* 📦 **1. Evidence Pack**: [**`WISPR_EVIDENCE.md`**](./WISPR_EVIDENCE.md) — Comprehensive 9-point technical evidence dossier.
+* 📸 **2. Screenshots (12 Raw Captures)**: [**`wispr-flow/`**](./wispr-flow) — Raw captures of Antigravity IDE voice sessions, task canvas, and official Wispr Flow metrics (3,911 words at 87 WPM).
+* 📜 **3. Prompt Log**: [**`WISPR_EVIDENCE.md#3-prompt-log`**](./WISPR_EVIDENCE.md#3-prompt-log) — Complete chronological log of atomic voice prompts across all 8 development phases.
+* 🔗 **4. Commit Mapping (Prompt → Feature → Code → Commit)**: [**`WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit`**](./WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit) — 1-to-1 traceability matrix with chronological execution cadence.
+* ⚡ **5. Live Demo (1-Click WOW)**: [**au-rag.vercel.app/machine-money**](https://au-rag.vercel.app/machine-money) — NASA IMS Anomaly ➔ GraphRAG Justification ➔ 250-sat BOLT11 Settlement in <200ms.
+
+---
+
 ### 🏆 For Hacker House Goa (HHGoa) Judges (3-Minute Fast-Track)
 
 > ⚡ **JUDGES START HERE**: Please read **[JUDGE_README.md](./JUDGE_README.md)** for the 3-minute executive summary, 1-click live demo link, and novel Bitcoin architecture breakdown without wading through 50KB of technical documentation!
@@ -47,15 +64,12 @@
 > 📌 **Direct Judge Quick Links**:
 > - ⚡ **Fast-Track Judge Guide**: **[JUDGE_README.md](./JUDGE_README.md)** (3-Minute Read)
 > - 🌐 **Live Production App**: [au-rag.vercel.app/machine-money](https://au-rag.vercel.app/machine-money)
-> - 🎙️ **Wispr Flow Development Proofs**: [**wispr-flow/**](./wispr-flow) (Full Voice-to-Code Prompting Proofs & 12 Screenshots proving 100% voice-driven AI build)
+> - 📜 **Full Wispr Evidence Dossier**: [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) (Evidence Pack, Screenshots, Prompt Log & Commit Mapping)
+> - 🎙️ **Wispr Flow Visual Gallery**: [**wispr-flow/**](./wispr-flow) (12 High-Res Screenshots proving 100% voice-driven build)
 > - 🎬 **3–5 Min Judge Demo Script**: [docs/JUDGE_DEMO_SCRIPT.md](./docs/JUDGE_DEMO_SCRIPT.md)
 > - 🔬 **Empirical Dataset Benchmark**: NASA IMS Bearing Run-to-Failure (`REPLAY-ASSET-01`)
-> - 🧪 **Test Evidence**: 100% Passing (384 automated checks total: 378 unit/integration tests passing + 6 browser E2E checks passing)
+> - 🧪 **Test Evidence**: 100% Passing (126 unit/integration tests passing in 9.45s)
 > - 📜 **Full Technical Verification Report**: [docs/MACHINE_MONEY_VERIFICATION.md](./docs/MACHINE_MONEY_VERIFICATION.md)
->
-> 🎙️ **PROVENANCE: Built 100% with Wispr Flow Voice Prompting**  
-> The entire AuRAG codebase (88 commits, 420+ files, multi-agent swarms, and Lightning machine-money protocols) was architected and built using **Wispr Flow** voice-to-text prompt engineering (3,911+ words dictated at 87 WPM).  
-> 📜 **Complete Evidence Dossier**: [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | 📸 **Inspect Voice Transcripts & 12 Screenshots**: [**wispr-flow/**](./wispr-flow)
 
 ---
 

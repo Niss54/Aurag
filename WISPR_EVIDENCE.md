@@ -263,7 +263,182 @@ All raw capture artifacts are permanently preserved in the repository under [`wi
 
 ## 5. Mapping: Wispr Prompt → Feature → Files Changed → Commit
 
-The table below provides a 1-to-1 traceability matrix proving that every architectural capability originated as a Wispr Flow voice prompt, implemented in specific source files, and committed to git history within the **29 Sep – 06 Oct 2026** sprint.
+### 5.1 Developer Execution Cadence & Proof Mechanics
+
+A core proof of authentic development is the **consistent 25–40 minute execution cadence** visible across the Wispr Flow screenshot logs and Git commit history:
+
+```
+[Voice Prompt Dictated in Wispr Flow]
+              │ (e.g. 8:12 PM)
+              ▼
+[Antigravity IDE Agent Generation & Refinement]
+              │ (~25–35 mins active code construction)
+              ▼
+[Local Unit Testing & Verification Pass]
+              │ (e.g. 8:38 PM)
+              ▼
+[Git Commit & Working Tree Sync]
+              │ (e.g. 8:40 PM)
+              ▼
+[Next Wispr Voice Prompt Dictated]
+              │ (e.g. 8:43 PM)
+```
+
+As demonstrated in **Screenshots 3, 4, 5, and 8**, each prompt timestamp is followed by ~25–35 minutes of coding, unit test verification, and git staging, right before the next prompt is dictated.
+
+---
+
+### 5.2 Deep-Dive Traceability Flows (Screenshot-Verified)
+
+#### Flow 1: BOLT11 Lightning Invoice Parsing & Validation
+```
+🎙️ Wispr Prompt #61 (Dictated: Oct 04, 7:12 PM — Screenshot 4)
+"Vault 11 invoice parsing and optimized validation engine. Implement: decode Vault 11 lightning payment request string, human-readable part, payment address, amount in satoshis, expires..."
+↓
+⚙️ Feature: Autonomous BOLT11 Lightning Invoice Decoding & Expiry Verification
+↓
+📂 Files Changed:
+  • backend/app/services/machine_money/bolt11.py
+  • tests/backend/test_bolt11.py
+↓
+💾 Git Commit: 3e163d3
+"feat(machine-money): implement bolt11 invoice parsing and validation engine"
+(Staged at 7:48 PM, ~36 mins after initial dictation)
+```
+
+#### Flow 2: NIP-47 Nostr Wallet Connect (NWC) Transport Client
+```
+🎙️ Wispr Prompt #64 (Dictated: Oct 04, 8:36 PM — Screenshot 4)
+"NIP-47 nostril wallet connect NWC transport client build backend app services machine money... Implement the NIP-47 protocol to utilize compute shared secrets via some files... send p-invoice commands with nostril relays."
+↓
+⚙️ Feature: Sovereign NIP-47 Nostr Wallet Connect (NWC) Transport Client
+↓
+📂 Files Changed:
+  • backend/app/services/machine_money/nwc.py
+  • backend/app/services/machine_money/providers/lnbits.py
+↓
+💾 Git Commit: 41051ff
+"feat(machine-money): implement nip-47 nostr wallet connect transport client"
+(Staged at 9:12 PM, ~36 mins after prompt)
+```
+
+#### Flow 3: Industrial Safety Guardrails & Prompt Injection Defense
+```
+🎙️ Wispr Prompt #53 (Dictated: Oct 03, 7:55 PM — Screenshot 5)
+"Industrial safety guardrails, prompt injection defense, increment agents ke andar tum ek guardrails file karke kuch bana dene hain: build input, input/output safety guardrails, prompt injection attack sanitized system..."
+↓
+⚙️ Feature: Industrial Prompt Injection Defenses & Deterministic Guardrails
+↓
+📂 Files Changed:
+  • backend/app/agents/guardrails.py
+  • tests/agents/test_guardrails_injection.py
+↓
+💾 Git Commit: f67d33b
+"feat(agents): implement safety guardrails and prompt injection defenses"
+(Staged at 8:32 PM, ~37 mins after prompt)
+```
+
+#### Flow 4: Regulatory Compliance Agent (OSHA 1910 / API 610)
+```
+🎙️ Wispr Prompt #54 (Dictated: Oct 03, 8:40 PM — Screenshot 5)
+"Regulatory compliance agent and safety checks: create an agent and create compliance files or a compliance check file, to implement compliance, especially for the agent to check proposed maintenance actions against OSHA..."
+↓
+⚙️ Feature: Automated Industrial Regulatory Compliance Reasoning Agent
+↓
+📂 Files Changed:
+  • backend/app/agents/compliance_agent.py
+  • tests/agents/test_compliance_rca.py
+↓
+💾 Git Commit: 5bbd98f
+"feat(agents): implement regulatory compliance agent and safety packs"
+(Staged at 9:15 PM, ~35 mins after prompt)
+```
+
+#### Flow 5: Supervisory Agent & Interactive Engineering Copilot
+```
+🎙️ Wispr Prompt #55 (Dictated: Oct 03, 9:20 PM — Screenshot 5)
+"Supervisory agent interactive engineering copilot create a supervisor file karke banana theek hai? Implement a central supervisor that plans executions, sets routes and tasks to specialized agents, reviews findings, and provides real-time streaming copilot responses."
+↓
+⚙️ Feature: Multi-Agent Supervisory Coordinator & Copilot Streaming Engine
+↓
+📂 Files Changed:
+  • backend/app/agents/supervisor.py
+  • backend/app/api/chat.py
+↓
+💾 Git Commit: f196bb8
+"feat(agents): implement supervisory agent and copilot interactive assistant"
+(Staged at 9:55 PM, ~35 mins after prompt)
+```
+
+#### Flow 6: Dynamic Fee Routing & Downtime Economic Engine
+```
+🎙️ Wispr Prompt #67 (Dictated: Oct 05, 8:12 PM — Screenshot 3)
+"Dynamic fee routing industrial economy engine. Build a routing file and an economic file to calculate: payment, routing fees, model, client downtime exposure (1.17 million), based on the 7.8 million exposure to payment rates"
+↓
+⚙️ Feature: Dynamic Routing Fee Engine & Plant Downtime Cost Model
+↓
+📂 Files Changed:
+  • backend/app/services/machine_money/routing.py
+  • backend/app/services/machine_money/economic_model.py
+↓
+💾 Git Commit: 4831086
+"feat(machine-money): implement dynamic fee routing and industrial economic modeling"
+(Staged at 8:40 PM, ~28 mins after prompt)
+```
+
+#### Flow 7: Cryptographic Proof Grounding & Neo4j Settlement Bridge
+```
+🎙️ Wispr Prompt #68 (Dictated: Oct 05, 8:43 PM — Screenshot 3)
+"Cryptographic proof for grounding and settlement dates: implement graph files and these files to verify that SHA-256 is finalized and payment has been recorded in the NEO 4C graph. Update the associated work orders' status to settled"
+↓
+⚙️ Feature: SHA-256 Preimage Verification & Neo4j Graph Settlement Binding
+↓
+📂 Files Changed:
+  • backend/app/services/machine_money/settlement.py
+  • backend/app/services/machine_money/graph_bridge.py
+↓
+💾 Git Commit: 327476e
+"feat(machine-money): implement cryptographic proof grounding and graph settlement bridge"
+(Staged at 9:18 PM, ~35 mins after prompt)
+```
+
+#### Flow 8: Machine Money Core Service & $0.50 Hard Spending Caps
+```
+🎙️ Wispr Prompt #69 (Dictated: Oct 05, 9:21 PM — Screenshot 3)
+"Machine money course, Service and analytics field service file, Enforce hard per-transaction spending caps: $0.50 daily budgets, Selling $250K, SHF 256, Adm potency, Casing and compute, Live settlement markets"
+↓
+⚙️ Feature: Machine Money Service, Analytics & Zero-Trust 500-Sat Policy Escrow
+↓
+📂 Files Changed:
+  • backend/app/services/machine_money/service.py
+  • backend/app/services/machine_money/analytics.py
+↓
+💾 Git Commit: 8ebc812
+"feat(machine-money): implement machine money core service and streaming analytics"
+(Staged at 9:55 PM, ~34 mins after prompt)
+```
+
+#### Flow 9: Machine Money REST API Endpoints
+```
+🎙️ Wispr Prompt #70 (Dictated: Oct 05, 10:00 PM — Screenshot 3)
+"Machine Money REST API endpoints implement Machine Money files exposing endpoints and ex..."
+↓
+⚙️ Feature: FastAPI Machine Money & Lightning REST Settlement Routes
+↓
+📂 Files Changed:
+  • backend/app/api/machine_money.py
+  • tests/backend/test_api_endpoints.py
+↓
+💾 Git Commit: 07f318c
+"feat(api): expose machine money lightning rest api and settlement endpoints"
+(Staged at 10:38 PM, ~38 mins after prompt)
+```
+
+---
+
+### 5.3 Complete Subsystem Traceability Matrix
+
+The table below catalogs the full architecture across all 8 development phases:
 
 | Wispr Prompt # | Feature / Architectural Subsystem | Key Files Changed / Created | Commit SHA & Date |
 | :--- | :--- | :--- | :--- |
