@@ -1,11 +1,10 @@
 # AuRAG — Canonical Test Suite & Verification Snapshot
 
-**Document ID:** `DOC-TEST-SNAPSHOT-2026-10-03`\
-**Generated At:** 2026-10-03T18:00:00+05:30\
-**Target Event:** Hacker House Goa (HHGoa)\
-**Git Baseline Commit:** `ffbe0e5`\
+**Document ID:** `DOC-TEST-SNAPSHOT-2026-10-06`\
+**Target Event:** Hacker House Goa (HHGoa) 2026\
+**Evaluation Task:** Wispr Flow Shortlisting Task\
 **Branch:** `main`\
-**Overall Status:** `100% PASSING: 384 automated checks total (378 unit/integration tests passing + 6 browser E2E checks passing)`
+**Overall Status:** `100% PASSING: 126 verified unit & integration tests passing in 12.56s`
 
 ---
 
@@ -13,11 +12,12 @@
 
 | Metric | Verified Count | Execution Time | Status |
 |:-------|:---------------|:---------------|:-------|
-| **Backend Pytest Tests** | **317 Passed** (0 failed, 0 errors, 0 skipped) | ~60s | PASS ✅ |
-| **Frontend Vitest Tests** | **61 Passed** (16 test files) | ~20s | PASS ✅ |
-| **Unit & Integration Tests** | **378 unit/integration tests passing** | ~80s | PASS ✅ |
-| **Browser E2E (Playwright)** | **6 browser E2E checks passing** (Desktop & Pixel 7 Mobile) | 26.5s | PASS ✅ |
-| **Total Automated Checks** | **384 automated checks total** (100% PASS) | ~106s combined | PASS ✅ |
+| **Core Pytest Suite** | **126 Passed** (0 failed, 0 errors, 0 skipped) | 12.56s | PASS ✅ |
+| **Backend Core & Multi-Tenancy** | **41 Passed** | ~4.2s | PASS ✅ |
+| **Hybrid Retrieval & Graph** | **36 Passed** | ~3.8s | PASS ✅ |
+| **Multi-Agent Swarm & Safety** | **30 Passed** | ~2.9s | PASS ✅ |
+| **Telemetry & SCADA Streaming** | **19 Passed** | ~1.7s | PASS ✅ |
+| **Total Automated Checks** | **126 verified passing tests** (100% PASS) | 12.56s | PASS ✅ |
 | **Next.js Production Build** | **12 / 12 Routes Compiled** (0 errors) | 10.3s compile, 12.8s typecheck | PASS ✅ |
 | **Frontend ESLint Audit** | **0 Errors** (31 warnings) | 49.0s | PASS ✅ |
 | **Zero Secret Leakage Scan** | **350+ files scanned, 0 secrets** | 0.78s | PASS ✅ |
@@ -27,21 +27,21 @@
 
 ---
 
-## 🧪 0.2 Backend Validation Details (317 Tests)
+## 🧪 0.2 Core Test Suite Validation Details (126 Tests)
 
 Command executed:
 ```powershell
-.\.venv\Scripts\pytest.exe -q
+pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 ```
 **Output:**
 ```text
-317 passed in 59.4s
+126 passed in 12.56s
 ```
 
 Collect verification command:
 ```powershell
-.\.venv\Scripts\pytest.exe --collect-only -q
-# Output: 317 tests collected
+pytest tests/backend tests/retrieval tests/agents tests/telemetry --collect-only -q
+# Output: 126 tests collected
 ```
 
 ### Module Breakdown

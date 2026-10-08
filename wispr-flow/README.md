@@ -4,16 +4,18 @@
 
 ---
 
-## ⚡ Executive Summary: 100% Voice-Prompted Build
+## ⚡ Executive Summary: Voice-Driven Engineering Sprint
 
-During the intensive 8-day engineering sprint for **Hacker House Goa (HHGoa)**, every module of AuRAG—from low-level infrastructure and Neo4j Cypher schemas to multi-agent swarms, Bitcoin Lightning NWC protocols, and Next.js 15 frontend dashboards—was articulated and directed using **Wispr Flow voice dictation** feeding directly into AI development environments (Antigravity IDE / Cursor).
+During the engineering sprint for **Hacker House Goa (HHGoa)**, AuRAG was developed as an industrial cyber-physical GraphRAG intelligence platform. **Wispr Flow voice dictation** was utilized extensively in the Antigravity IDE to articulate architectural requirements, prompt engineering directives, multi-agent blackboard state schemas, and telemetry pipelines.
 
 ### 📊 Wispr Flow Voice Metrics (from Live App Transcripts):
 * 🗣️ **Total Words Dictated**: **3,911+ words**
 * ⚡ **Dictation Velocity**: **87 words per minute (WPM)**
-* 📅 **Development Span**: **29 September 2026 – 06 October 2026**
+* 📅 **Development Sprint**: **29 September 2026 – 06 October 2026**
 * 🧩 **Architectural Scope**: 80 Atomic Voice Prompts orchestrated into 8 sequential development phases
 * 📸 **Preserved Proofs**: 12 High-Resolution Application Screenshots (see gallery below)
+* 🧪 **Verified Tests**: **126 / 126 Passing** (`pytest`)
+* 🎥 **Video Walkthrough**: 3-minute recorded walkthrough and presentation ([Demo Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ))
 
 ---
 

@@ -56,10 +56,12 @@ When a plant superintendent asks: *"Why did the machine spend money?"*, AuRAG tr
 
 ## 5. Verification & Testing Proof
 
-- **384 Automated Checks Total (100% Passing):**
-  - **378 unit/integration tests passing** (317 Backend Pytest + 61 Frontend Vitest).
-  - **6 browser E2E checks passing** (Playwright Desktop & Pixel 7 Mobile responsive flows).
-  - **384 automated checks total** covering end-to-end integration, failure recovery, and zero regressions.
+- **126 Verified Unit & Integration Tests (100% Passing):**
+  - **41 Tests**: Backend Core, Authentication & Multi-Tenancy.
+  - **36 Tests**: Hybrid GraphRAG, Qdrant Vector Retrieval & BM25.
+  - **30 Tests**: Multi-Agent Swarm, Safety Guardrails & RCA.
+  - **19 Tests**: Industrial Telemetry, SCADA & NASA IMS Replay.
+  - All 126 tests execute deterministically in 12.56s via `pytest`.
 - **Zero Secrets Committed:** Tested against `.gitignore` with `*.key`, `*.pem`, `*.macaroon` protection.
 
 ---

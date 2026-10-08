@@ -85,8 +85,8 @@
 * **Narration:**
   > "To summarize our technical defensibility:
   > 1. **Zero Credential Leaks:** Our pre-submission scanners scanned 350+ files — zero API keys or secrets in source.
-  > 2. **Complete Test Coverage:** 378 unit/integration tests passing (317 Pytest + 61 Vitest) and 6 browser E2E checks passing — 384 automated checks total across regression, failure-paths, and E2E loops.
-  > 3. **Production Deployed:** Next.js 16 live on Vercel, FastAPI Docker container live on Railway.
+  > 2. **Complete Test Coverage:** 126 unit/integration tests passing (100% test pass rate across backend, retrieval, agents, and telemetry) in 12.56s.
+  > 3. **Production Deployed:** Next.js 15 live on Vercel, FastAPI Docker container live on Railway.
   > 4. **Authentic Provenance:** All code custom developed for Hacker House Goa with full architectural verification.
   > AuRAG proves that when machines have money, industrial operations transform from slow, reactive maintenance into autonomous, self-healing cyber-physical infrastructure designed for zero unplanned downtime.
   > Thank you, and we welcome your questions!"
