@@ -21,7 +21,7 @@
 | [`backend/app/main.py`](../backend/app/main.py) | Application entrypoint & router registry | Included `machine_money.router` under `/api` prefix | Low | Mounts Machine Money REST API routes without altering existing middlewares or endpoints. |
 | [`backend/app/db/models.py`](../backend/app/db/models.py) | SQLAlchemy relational schema definitions | Added `PaymentRecord` model with foreign key link to `WorkOrder` | Low | Adds relational persistence for satoshi transactions, BOLT11 invoices, and preimages. |
 | [`backend/app/core/neo4j.py`](../backend/app/core/neo4j.py) | Neo4j driver & resilient fallback graph session | Added `Payment` node traversal branch in `FallbackNeo4jSession` | Low | Guarantees offline demo resiliency if remote Neo4j Aura is unreachable. |
-| [`backend/app/services/automations/service.py`](../backend/app/services/automations/service.py) | Plant governance & automation policy engine | Seeded default policy `POL-LIGHTNING-MACHINE-MONEY` (500 sat cap) | Low | Integrates spending controls into existing industrial governance system. |
+| [`backend/app/services/automation.py`](../backend/app/services/automation.py) | Plant governance & automation policy engine | Seeded default policy `POL-LIGHTNING-MACHINE-MONEY` (500 sat cap) | Low | Integrates spending controls into existing industrial governance system. |
 | [`frontend/lib/api.ts`](../frontend/lib/api.ts) | Frontend API client & TypeScript interfaces | Added Machine Money interfaces and fetch wrappers | Low | Type-safe client communication for operator workspace. |
 | [`frontend/components/AppShell.tsx`](../frontend/components/AppShell.tsx) | Workspace route title resolver | Added `["/machine-money", "Machine Money"]` mapping | Low | Displays proper breadcrumbs and header titles. |
 | [`frontend/components/AppSidebar.tsx`](../frontend/components/AppSidebar.tsx) | Navigation sidebar | Added `Machine Money` menu item with `ZapIcon` | Low | Gives operator 1-click access to the new workspace. |
@@ -54,8 +54,7 @@
 13. **`test_machine_money_task6.py`:** Telemetry bridge, agent tool boundary, and evidence package tests.
 14. **`test_e2e_machine_money.py`:** Complete 17-test End-to-End verification test suite.
 
-### E. Specification & Architecture Documentation (`docs/`)
-15. **`docs/HHGOA_ELIGIBILITY_NOTE.md`:** Hacker House Goa track alignment, autonomous M2M architecture, and 5 proof points.
+15. **`docs/archive/MACHINE_MONEY_ARCHIVE.md`:** Historical machine money track archive, autonomous M2M architecture overview, and proof points.
 16. **`docs/ARCHITECTURE_MACHINE_MONEY.md`:** Master architectural design, domain models, and state lifecycle.
 17. **`docs/MACHINE_MONEY_ENV_INVENTORY.md`:** Comprehensive secrets, API keys, and environment matrix with connectivity recipes.
 18. **`.env.machine-money.example`:** Safe configuration template with zero exposed credentials.

@@ -24,7 +24,7 @@ The resulting system is an end-to-end cyber-physical autonomous micro-settlement
 - **Commit:** `d382ec8` (2026-10-02)
 - **Message:** `chore(hackathon): record machine money baseline and eligibility safety gate`
 - **Key Deliverables:**
-  - `docs/HACKATHON_ELIGIBILITY.md` initial scaffold documenting git provenance and rules adherence.
+  - `docs/archive/MACHINE_MONEY_ARCHIVE.md` initial scaffold documenting git provenance and track history.
   - Zero-backdating policy verification and repository hygiene checklist.
   - Verification of foundational models and database boundaries.
 
@@ -185,7 +185,7 @@ The resulting system is an end-to-end cyber-physical autonomous micro-settlement
 - **Key Deliverables:**
   - `docs/JUDGE_DEMO_SCRIPT.md`: Precise 0:00–5:00 timing, talking points, screen actions, and anticipated Q&A.
   - `docs/MACHINE_MONEY_VERIFICATION.md`: Section 14 scorecard confirming 100% compliance across all 11 phases.
-  - `docs/HACKATHON_ELIGIBILITY.md`: Full event compliance, code reuse boundaries, and provenance audit sign-off.
+  - `docs/archive/MACHINE_MONEY_ARCHIVE.md`: Full event compliance, code reuse boundaries, and provenance audit sign-off.
   - `docs/CHANGELOG_MACHINE_MONEY.md`: This comprehensive historical changelog.
 
 ---

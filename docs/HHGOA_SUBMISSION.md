@@ -56,7 +56,7 @@ When a plant superintendent asks: *"Why did the machine spend money?"*, AuRAG tr
 
 ## 5. Verification & Testing Proof
 
-- **126 Verified Tests in Core Validation Suite (322 Total Test Functions in Repository):**
+- **126 Verified Tests in Core Validation Suite (392 Total Automated Verification Checks across repo):**
   - **41 Tests**: Backend Core, Authentication & Multi-Tenancy.
   - **36 Tests**: Hybrid GraphRAG, Qdrant Vector Retrieval & BM25.
   - **30 Tests**: Multi-Agent Swarm, Safety Guardrails & RCA.
