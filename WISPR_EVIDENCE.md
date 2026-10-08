@@ -43,7 +43,6 @@ AuRAG solves this by uniting physical telemetry with deterministic knowledge gra
 1. **Sensory Telemetry Layer**: Ingests high-frequency accelerometry and sensor telemetry from industrial OPC-UA protocol adapters and the NASA IMS bearing run-to-failure vibration dataset replayed at 20 kHz.
 2. **Grounded Industrial GraphRAG**: Performs multi-hop ontological traversals in Neo4j across equipment hierarchies, past failure events, active work orders, and safety procedures (PROC-001), combined with dense vector search (Qdrant) and lexical keyword matching (BM25) fused via Reciprocal Rank Fusion (RRF).
 3. **Multi-Agent Swarm with Safety Guardrails**: Coordinates specialist agents (Supervisory Router, RCA Specialist, OSHA 1910 / API 610 Compliance Verifier) protected by deterministic prompt injection defenses to synthesize grounded maintenance directives.
-4. **Archived Experimental Extension**: Earlier exploratory research into autonomous machine-to-machine micropayment settlement (Bitcoin Lightning / BOLT11) is preserved for historical completeness in [`docs/archive/MACHINE_MONEY_ARCHIVE.md`](./docs/archive/MACHINE_MONEY_ARCHIVE.md).
 
 ---
 

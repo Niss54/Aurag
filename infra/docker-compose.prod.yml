@@ -8,7 +8,7 @@ services:
     environment:
       POSTGRES_DB: aurag_enterprise
       POSTGRES_USER: aurag_admin
-      POSTGRES_PASSWORD: ChangeMeInProductionVault123!
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -38,7 +38,7 @@ services:
     container_name: aurag-prod-neo4j
     restart: always
     environment:
-      NEO4J_AUTH: neo4j/production_password_123
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD}
       NEO4J_PLUGINS: '["apoc"]'
     ports:
       - "7474:7474"
@@ -77,7 +77,7 @@ services:
       redis:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql://aurag_admin:ChangeMeInProductionVault123!@postgres:5432/aurag_enterprise
+      DATABASE_URL: postgresql://aurag_admin:${POSTGRES_PASSWORD}@postgres:5432/aurag_enterprise
       REDIS_HOST: redis
       REDIS_PORT: 6379
       LLM_PROVIDER: bedrock

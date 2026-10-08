@@ -101,17 +101,6 @@ tests/telemetry/test_nasa_scada_opcua.py .....................           [100%]
 
 ---
 
-## 📦 5. Historical & Experimental Modules (Archived)
-
-Earlier hackathon research explored an experimental cyber-physical economic extension: autonomous machine-to-machine micropayment settlement over Bitcoin Lightning (BOLT11 / LNbits).
-
-To keep the primary evaluation focused squarely on the **Wispr Flow Voice-Driven Development Task**, all machine-money documentation has been preserved in the historical archive:
-* 📜 [**`docs/archive/MACHINE_MONEY_ARCHIVE.md`**](./docs/archive/MACHINE_MONEY_ARCHIVE.md)
-* 🏗️ [**`docs/ARCHITECTURE_MACHINE_MONEY.md`**](./docs/ARCHITECTURE_MACHINE_MONEY.md)
-* 🧪 [**`docs/MACHINE_MONEY_VERIFICATION.md`**](./docs/MACHINE_MONEY_VERIFICATION.md)
-
----
-
 ## 🧭 Evaluator Scoring Rubric Quick Map
 
 | Evaluation Dimension | Where to Verify in AuRAG | Status |

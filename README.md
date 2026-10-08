@@ -236,18 +236,6 @@ npm run dev
 
 ---
 
-## 📦 Experimental Extension: Autonomous Machine Money (Archived)
-
-During earlier hackathon architectural explorations, an experimental cyber-physical economic extension was researched: autonomous machine-to-machine micropayment settlement over Bitcoin Lightning (BOLT11 / LNbits).
-
-This research and its technical specifications are preserved for auditability and technical provenance in the historical archive:
-* 📜 [**MACHINE_MONEY_ARCHIVE.md**](./docs/archive/MACHINE_MONEY_ARCHIVE.md): Executive summary and protocol review
-* 🏗️ [**ARCHITECTURE_MACHINE_MONEY.md**](./docs/ARCHITECTURE_MACHINE_MONEY.md): Detailed protocol architecture specification
-* 🧪 [**MACHINE_MONEY_VERIFICATION.md**](./docs/MACHINE_MONEY_VERIFICATION.md): Verification report and test suites
-* 🎬 [**HHGOA_MACHINE_MONEY_DEMO.md**](./docs/HHGOA_MACHINE_MONEY_DEMO.md): Historical presentation script
-
----
-
 ## 📖 Key Documentation Links
 
 | Document | Purpose |
@@ -257,7 +245,7 @@ This research and its technical specifications are preserved for auditability an
 | [**ARCHITECTURE.md**](./ARCHITECTURE.md) | Authoritative system architecture, graph ontology schemas, and ADRs |
 | [**wispr-flow/README.md**](./wispr-flow/README.md) | 12 high-resolution screenshots gallery and dictation transcripts |
 | [**docs/DEMO_SCRIPT.md**](./docs/DEMO_SCRIPT.md) | 5-minute interactive live demonstration script and preflight checklist |
-| [**docs/archive/**](./docs/archive/) | Historical PRDs, early research docs, and machine money archive |
+| [**docs/archive/**](./docs/archive/) | Historical PRDs and early project baseline specifications |
 
 ---
 

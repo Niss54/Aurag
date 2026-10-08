@@ -47,11 +47,7 @@ data/**/*.tmp
 scratch/
 test-results/
 *.zip
-# Local video recordings
-*.webm
-*.mp4
-video_output/
-demo_videos/
+
 
 # Local scratch notes & session logs
 NOTES.md

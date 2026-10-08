@@ -5,10 +5,9 @@
 >
 > This document is preserved for historical audit purposes only (capturing the early Phase 1 baseline from October 5, 2026).
 > For the current authoritative submission status and verified metrics, consult:
-> - [CURRENT_TEST_SNAPSHOT.md](../CURRENT_TEST_SNAPSHOT.md) — 384 Automated Checks Passing (378 Unit/Integration + 6 Browser E2E)
+> - [CURRENT_TEST_SNAPSHOT.md](../CURRENT_TEST_SNAPSHOT.md) — 392 Automated Verification Checks Passing (126 Core Pytest Cases)
 > - [RAGAS_FINAL_VERIFICATION.md](../RAGAS_FINAL_VERIFICATION.md) — 24/24 Evaluation Pipeline Verification
 > - [CLAIM_EVIDENCE_MATRIX.md](../CLAIM_EVIDENCE_MATRIX.md) — Grounded Claims & Technical Verification Matrix
-> - [MACHINE_MONEY_VERIFICATION.md](../MACHINE_MONEY_VERIFICATION.md) — Full Machine Money Subsystem Proof & Audit
 > - [JUDGE_DEMO_SCRIPT.md](../JUDGE_DEMO_SCRIPT.md) — Authoritative Step-by-Step Evaluation Walkthrough
 
 **Environment:** local Windows host plus Linux Docker  

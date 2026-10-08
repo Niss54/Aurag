@@ -75,7 +75,6 @@ variable "db_password" {
   description = "PostgreSQL master password"
   type        = string
   sensitive   = true
-  default     = "ChangeMeInProductionVault123!"
 }
 
 variable "redis_node_type" {

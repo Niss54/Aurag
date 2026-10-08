@@ -1,6 +1,6 @@
 # RAGAS Final Retrieval Quality Acceptance Gate
 
-This document records the authoritative execution of the retrieval evaluation gate across all **24 canonical ground-truth operational benchmark cases** per PRD Section 8 and Section 4 of `prd4.md`.
+This document records the authoritative execution of the retrieval evaluation gate across all **24 canonical ground-truth operational benchmark cases** per the AuRAG evaluation specification.
 
 ---
 
