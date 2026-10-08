@@ -53,8 +53,8 @@ AuRAG solves this by uniting physical telemetry with deterministic knowledge gra
 In high-integrity engineering evaluation, claims must reflect real-world development practices. Complex production platforms are not spun out of an empty void solely by voice in a single moment. 
 
 AuRAG’s authentic engineering provenance is structured as follows:
-* **Development Span**: The intensive voice-driven engineering sprint was conducted **29 September 2026 – 06 October 2026** for the Hacker House Goa 2026 Wispr Flow task.
-* **100% Voice-Driven Prompt Engineering Sprint**: During the intensive **Hacker House Goa 2026 sprint (29 September 2026 – 06 October 2026)**, **Wispr Flow** was deployed as the voice dictation engine to dictate 100% of the platform's architectural prompts, multi-agent state schemas, telemetry pipelines, and system integration into the Antigravity IDE.
+* **Development Span**: The intensive voice-driven engineering sprint was conducted **29 September 2026 – 10 October 2026** for the Hacker House Goa 2026 Wispr Flow task.
+* **100% Voice-Driven Prompt Engineering Sprint**: During the intensive **Hacker House Goa 2026 sprint (29 September 2026 – 10 October 2026)**, **Wispr Flow** was deployed as the voice dictation engine to dictate 100% of the platform's architectural prompts, multi-agent state schemas, telemetry pipelines, and system integration into the Antigravity IDE.
 * **Empirical Voice Metrics**: Over **3,911 total words were dictated at an average velocity of 87 WPM**, documented and verified in the official Wispr Flow session dashboard ([`wispr-flow/ss12.png`](./wispr-flow/ss12.png)) and 11 accompanying visual captures.
 * **Visual Evidence of Wispr Flow Voice Dictation**: The raw dictation captures provide clear visual evidence of Wispr Flow voice dictation, featuring supporting phonetic ASR transcription artifacts (e.g., `"Vault 11"` for BOLT11, `"nostril"` for Nostr, `"NEO 4C"` for Neo4j, `"NCP"` for MCP), confirming live microphone dictation during active engineering sessions.
 

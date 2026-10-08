@@ -32,7 +32,7 @@
 ## 🎙️ WISPR FLOW VOICE-DRIVEN DEVELOPMENT EVIDENCE
 
 > **Hacker House Goa 2026 Shortlisting Evaluation**  
-> AuRAG is an industrial cyber-physical GraphRAG platform. During the **Hacker House Goa 2026 engineering sprint**, **Wispr Flow** voice dictation was used to build **100% of the platform's architectural prompt directives, multi-agent state schemas, and telemetry pipelines** (**3,911+ words dictated at 87 WPM** into the Antigravity IDE).
+> AuRAG is an industrial cyber-physical GraphRAG platform. During the **Hacker House Goa 2026 engineering sprint (29 September 2026 – 10 October 2026)**, **Wispr Flow** voice dictation was used to build **100% of the platform's architectural prompt directives, multi-agent state schemas, and telemetry pipelines** (**3,911+ words dictated at 87 WPM** into the Antigravity IDE).
 
 ### ⚡ Verification & Evidence Pipeline
 ```

@@ -1,6 +1,6 @@
 # AuRAG — Canonical Test Suite & Verification Snapshot
 
-**Document ID:** `DOC-TEST-SNAPSHOT-2026-10-06`\
+**Document ID:** `DOC-TEST-SNAPSHOT-2026-10-10`\
 **Target Event:** Hacker House Goa (HHGoa) 2026\
 **Evaluation Task:** Wispr Flow Shortlisting Task\
 **Branch:** `main`\

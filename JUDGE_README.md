@@ -37,7 +37,7 @@
 
 ## 🎙️ 2. Wispr Flow Voice-Driven Development Evidence (1 Minute)
 
-For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task**, AuRAG provides a comprehensive, tamper-evident 5-layer proof chain:
+For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task (29 September 2026 – 10 October 2026)**, AuRAG provides a comprehensive, tamper-evident 5-layer proof chain:
 
 | Proof Layer | Direct Evidence Resource | Evaluator Verification Detail |
 | :--- | :--- | :--- |
