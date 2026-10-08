@@ -4,7 +4,7 @@
 > We value your time. This document provides everything you need to evaluate AuRAG for the **Wispr Flow Shortlisting Task** in **under 3 minutes**.
 >
 > 🎙️ **Voice-Driven Engineering Provenance**:  
-> The AuRAG platform was architected, orchestrated, and verified using **Wispr Flow** voice dictation (**3,911+ words dictated at 87 WPM** into the Antigravity IDE).  
+> The AuRAG platform was architected, orchestrated, and verified using **Wispr Flow** voice dictation for ~85–90% of development (**3,911+ words dictated at 87 WPM** into the Antigravity IDE, with manual keyboard input reserved for iterative debugging and precision diffs).  
 > 📜 **Complete Technical Evidence Dossier**: [**`WISPR_EVIDENCE.md`**](./WISPR_EVIDENCE.md) | 📸 **12 Visual Proofs**: [**`wispr-flow/`**](./wispr-flow)
 
 ---
@@ -42,10 +42,10 @@ For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task**, AuRAG provides a
 | Proof Layer | Direct Evidence Resource | Evaluator Verification Detail |
 | :--- | :--- | :--- |
 | **1. Official Wispr Analytics** | [`wispr-flow/ss12.png`](./wispr-flow/ss12.png) | Official Wispr Flow dashboard capture confirming **3,911 total words dictated** at **87 WPM**. |
-| **2. Natural Phonetic ASR Artifacts** | [`wispr-flow/ss4.png`](./wispr-flow/ss4.png), [`ss5.png`](./wispr-flow/ss5.png) | Unforgeable speech-to-text acoustic artifacts in raw transcripts: `"Vault 11"` for BOLT11, `"nostril"` for Nostr, `"NEO 4C"` for Neo4j, `"NCP"` for MCP. |
-| **3. Realistic Commit Cadence** | [`WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit`](./WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit) | Consistent 25–40 minute cycles: Voice prompt dictated ➔ Code generated & tested ➔ Git commit staged right before next prompt. |
+| **2. Visual Voice Evidence & ASR Artifacts** | [`wispr-flow/ss4.png`](./wispr-flow/ss4.png), [`ss5.png`](./wispr-flow/ss5.png) | Visual evidence of Wispr Flow voice dictation with supporting phonetic ASR transcription artifacts: `"Vault 11"` for BOLT11, `"nostril"` for Nostr, `"NEO 4C"` for Neo4j, `"NCP"` for MCP. |
+| **3. Realistic Development Cadence** | [`WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed`](./WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed) | Consistent 25–40 minute cycles: Voice prompt dictated ➔ Code generated & tested ➔ File staged right before next prompt. |
 | **4. Raw Screenshot Gallery** | [`wispr-flow/`](./wispr-flow) | 12 high-resolution screenshots capturing IDE dictation bars, task canvases, and telemetry adapters. |
-| **5. Traceability Mapping** | [`WISPR_EVIDENCE.md`](./WISPR_EVIDENCE.md) | 1-to-1 matrix mapping: **Wispr Prompt # ➔ Feature ➔ Source Files Changed ➔ Git Commit SHA**. |
+| **5. Subsystem Traceability** | [`WISPR_EVIDENCE.md`](./WISPR_EVIDENCE.md) | Matrix mapping: **Wispr Prompt # ➔ Subsystem / Feature ➔ Files & Modules Changed**. |
 
 ---
 
@@ -56,7 +56,7 @@ For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task**, AuRAG provides a
 * 📖 **FastAPI Swagger API Docs**: [**http://localhost:8000/docs**](http://localhost:8000/docs)
 
 ### 🎥 3-Minute Video Walkthrough
-* Watch the recorded walkthrough: **[AuRAG Voice-Driven Demo Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)**
+* Watch the recorded walkthrough: **[AuRAG Voice-Driven Demo on YouTube](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)**
 * Scene-by-scene script and rehearsal notes are available in [`docs/DEMO_SCRIPT.md`](./docs/DEMO_SCRIPT.md).
 
 ### 👉 1-Click Interactive Walkthrough (In Browser):
@@ -67,12 +67,12 @@ For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task**, AuRAG provides a
 
 ---
 
-## 🧪 4. Verified Test Evidence (126 Passing Tests)
+## 🧪 4. Verified Test Evidence (126 Verified Tests in Core Suite)
 
 AuRAG enforces deterministic code quality across all core engineering subsystems:
 
 ```bash
-# Run the complete test suite locally
+# Run the core validation suite locally
 pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 ```
 
@@ -92,8 +92,9 @@ tests/telemetry/test_nasa_scada_opcua.py .....................           [100%]
 ============================= 126 passed in 12.56s ============================
 ```
 
-* **126 / 126 Unit & Integration Tests Passing** (100% Pass Rate).
-* Zero flaky network dependencies; all tests execute in under 13 seconds.
+* **126 / 126 Unit & Integration Tests Passing** in the core validation suite.
+* **322 Total Test Functions** located across the `tests/` repository corpus for edge-case and deep domain validation.
+* Zero flaky network dependencies; all 126 core tests execute in under 13 seconds.
 
 ---
 
@@ -114,6 +115,6 @@ To keep the primary evaluation focused squarely on the **Wispr Flow Voice-Driven
 | :--- | :--- | :---: |
 | **Wispr Flow Usage** | [`WISPR_EVIDENCE.md`](./WISPR_EVIDENCE.md) & [`wispr-flow/`](./wispr-flow) (3,911 words, 12 screenshots, ASR artifacts) | **VERIFIED ✅** |
 | **System Innovation** | Industrial GraphRAG + SCADA Telemetry + Multi-Agent Swarm | **VERIFIED ✅** |
-| **Code Completeness** | 90+ atomic git commits, full FastAPI backend + Next.js 15 UI | **VERIFIED ✅** |
-| **Test Rigor** | **126 unit/integration tests passing** in 12.56s (`pytest`) | **VERIFIED ✅** |
-| **Live Demonstration** | [au-rag.vercel.app](https://au-rag.vercel.app) + [3-Min Demo Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ) | **VERIFIED ✅** |
+| **Code Completeness** | Full FastAPI backend + Next.js 16.2.11 UI (App Router) | **VERIFIED ✅** |
+| **Test Rigor** | **126 verified tests in core validation suite** in 12.56s (`pytest`) | **VERIFIED ✅** |
+| **Live Demonstration** | [au-rag.vercel.app](https://au-rag.vercel.app) + [YouTube Demo Video](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq) | **VERIFIED ✅** |

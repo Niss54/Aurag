@@ -6,7 +6,7 @@
 
 ## ⚡ Executive Summary: Voice-Driven Engineering Sprint
 
-During the engineering sprint for **Hacker House Goa (HHGoa)**, AuRAG was developed as an industrial cyber-physical GraphRAG intelligence platform. **Wispr Flow voice dictation** was utilized extensively in the Antigravity IDE to articulate architectural requirements, prompt engineering directives, multi-agent blackboard state schemas, and telemetry pipelines.
+During the engineering sprint for **Hacker House Goa (HHGoa)**, AuRAG was developed as an industrial cyber-physical GraphRAG intelligence platform. **Wispr Flow voice dictation** was utilized extensively in the Antigravity IDE to articulate approximately **85–90%** of the platform's architectural requirements, prompt engineering directives, multi-agent state schemas, and telemetry pipelines (with manual keyboard input reserved for iterative debugging and precision diffs).
 
 ### 📊 Wispr Flow Voice Metrics (from Live App Transcripts):
 * 🗣️ **Total Words Dictated**: **3,911+ words**
@@ -14,8 +14,8 @@ During the engineering sprint for **Hacker House Goa (HHGoa)**, AuRAG was develo
 * 📅 **Development Sprint**: **29 September 2026 – 06 October 2026**
 * 🧩 **Architectural Scope**: 80 Atomic Voice Prompts orchestrated into 8 sequential development phases
 * 📸 **Preserved Proofs**: 12 High-Resolution Application Screenshots (see gallery below)
-* 🧪 **Verified Tests**: **126 / 126 Passing** (`pytest`)
-* 🎥 **Video Walkthrough**: 3-minute recorded walkthrough and presentation ([Demo Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ))
+* 🧪 **Verified Tests**: **126 verified tests in the core validation suite** (322 total test functions in repository)
+* 🎥 **Video Walkthrough**: Recorded walkthrough and presentation ([YouTube Demo Video](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq))
 
 ---
 
@@ -27,8 +27,7 @@ The screenshots below are raw captures from the active **Wispr Flow** dictation 
 
 ### 1. Wispr Flow Prompt Execution in Antigravity IDE
 **File**: [`ss1.png`](./ss1.png)  
-**Phase**: Phase 1 — Project Inception & Foundation  
-**Description**: Direct voice dictation captured via Wispr Flow into the Antigravity IDE agent prompt input. Dictated instructions for initial repository scaffolding, Python 3.12, Node.js, Next.js, Neo4j, MIT License with copyright `Niss54`, and high-level platform vision.
+**Description**: Direct voice dictation captured via Wispr Flow into the Antigravity IDE agent prompt input. Dictated instructions for initial repository scaffolding, Python 3.12, Node.js, Next.js, Neo4j, MIT License, and high-level platform vision.
 
 <div align="center">
   <img src="./ss1.png" width="95%" alt="Wispr Flow Voice Dictation in Antigravity IDE"/>

@@ -17,8 +17,9 @@
 </p>
 
 <p align="center">
-  <a href="./WISPR_EVIDENCE.md"><img src="https://img.shields.io/badge/Wispr%20Flow-Voice--Driven%20Build-8A2BE2?style=for-the-badge&logo=soundcharts&logoColor=white" alt="Wispr Flow Voice-Driven"/></a>
-  <a href="./WISPR_EVIDENCE.md#7-testing-evidence"><img src="https://img.shields.io/badge/Pytest-126%2F126%20Passing-2ea44f?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest 126/126 Passing"/></a>
+  <a href="./WISPR_EVIDENCE.md"><img src="https://img.shields.io/badge/Wispr%20Flow-~85--90%25%20Voice--Driven-8A2BE2?style=for-the-badge&logo=soundcharts&logoColor=white" alt="Wispr Flow Voice-Driven"/></a>
+  <a href="./WISPR_EVIDENCE.md#7-testing-evidence-126-verified-tests-in-core-suite"><img src="https://img.shields.io/badge/Core%20Pytest-126%20Verified%20Tests-2ea44f?style=for-the-badge&logo=pytest&logoColor=white" alt="Core Pytest 126 Verified Tests"/></a>
+  <a href="https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq"><img src="https://img.shields.io/badge/Walkthrough%20Video-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo Video"/></a>
   <a href="https://au-rag.vercel.app"><img src="https://img.shields.io/badge/Live%20Demo-au--rag.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/></a>
   <a href="./wispr-flow"><img src="https://img.shields.io/badge/Screenshots-12%20Proofs-blue?style=for-the-badge&logo=googlephotos&logoColor=white" alt="12 Proof Screenshots"/></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License"/></a>
@@ -31,11 +32,11 @@
 ## 🎙️ WISPR FLOW VOICE-DRIVEN DEVELOPMENT EVIDENCE
 
 > **Hacker House Goa 2026 Shortlisting Evaluation**  
-> AuRAG is an industrial cyber-physical GraphRAG platform. During the **Hacker House Goa 2026 engineering sprint**, **Wispr Flow** voice dictation was used to drive rapid prompt engineering, agent state architectures, telemetry pipelines, and system integration (**3,911+ words dictated at 87 WPM**).
+> AuRAG is an industrial cyber-physical GraphRAG platform. During the **Hacker House Goa 2026 engineering sprint**, **Wispr Flow** voice dictation was used to build approximately **85–90%** of the platform's architecture, prompt engineering, multi-agent state definitions, and telemetry pipelines (**3,911+ words dictated at 87 WPM** into the Antigravity IDE, with manual keyboard input reserved for iterative debugging and precision diffs).
 
 ### ⚡ Verification & Evidence Pipeline
 ```
-Evidence Pack ➔ 12 Screenshots ➔ Voice Prompt Log ➔ Commit Traceability ➔ Video Walkthrough & Live Demo
+Evidence Pack ➔ 12 Screenshots ➔ Voice Prompt Log ➔ Subsystem Traceability ➔ Video Walkthrough & Live Demo
 ```
 
 | Asset | Resource | Description |
@@ -43,9 +44,9 @@ Evidence Pack ➔ 12 Screenshots ➔ Voice Prompt Log ➔ Commit Traceability �
 | 📦 **Evidence Pack** | [**`WISPR_EVIDENCE.md`**](./WISPR_EVIDENCE.md) | Canonical technical evidence dossier & sprint audit |
 | 📸 **12 Visual Proofs** | [**`wispr-flow/`**](./wispr-flow) | Raw captures from Antigravity IDE & Wispr Flow dashboard |
 | 📜 **Prompt Log** | [**`WISPR_EVIDENCE.md#3-prompt-log`**](./WISPR_EVIDENCE.md#3-prompt-log) | Chronological log of voice prompts across development phases |
-| 🔗 **Commit Mapping** | [**`WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit`**](./WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed--commit) | Traceability showing ~30-min prompt ➔ code ➔ commit cycles |
-| 🎥 **Walkthrough Video** | [**#video-walkthrough--demo-presentation**](#-video-walkthrough--demo-presentation) | 3-minute video presentation & interactive tour |
-| 🧪 **Test Verification** | [**`tests/`**](./WISPR_EVIDENCE.md#7-testing-evidence) | **126/126 unit & integration tests passing** (`pytest`) |
+| 🔗 **Subsystem Traceability** | [**`WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed`**](./WISPR_EVIDENCE.md#5-mapping-wispr-prompt--feature--files-changed) | Traceability showing ~30-min prompt ➔ code iteration cycles |
+| 🎥 **Walkthrough Video** | [**Watch on YouTube**](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq) | 3-minute video presentation & interactive tour |
+| 🧪 **Test Verification** | [**`WISPR_EVIDENCE.md#7-testing-evidence-126-verified-tests-in-core-suite`**](./WISPR_EVIDENCE.md#7-testing-evidence-126-verified-tests-in-core-suite) | **126 verified tests in the core validation suite** (322 total tests in repo) |
 | 🌐 **Live Application** | [**au-rag.vercel.app**](https://au-rag.vercel.app) | Live production web application |
 | 📦 **Historical Archive** | [**`docs/archive/`**](./docs/archive) | Earlier exploratory PRDs and Machine Money research docs |
 
@@ -57,31 +58,31 @@ Evidence Pack ➔ 12 Screenshots ➔ Voice Prompt Log ➔ Commit Traceability �
 >
 > 📌 **Direct Judge Quick Links**:
 > - ⚡ **Fast-Track Judge Guide**: **[JUDGE_README.md](./JUDGE_README.md)** (3-Minute Read)
+> - 🎥 **Live Demo Video**: [**AuRAG Walkthrough on YouTube**](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
 > - 🌐 **Live Production App**: [au-rag.vercel.app](https://au-rag.vercel.app)
-> - 📜 **Full Wispr Evidence Dossier**: [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) (Evidence Pack, Screenshots, Prompt Log & Commit Mapping)
+> - 📜 **Full Wispr Evidence Dossier**: [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) (Evidence Pack, Screenshots, Prompt Log & Traceability)
 > - 🎙️ **Wispr Flow Visual Gallery**: [**wispr-flow/**](./wispr-flow) (12 High-Res Screenshots proving voice-driven build)
-> - 🎥 **Demo Video Walkthrough**: [**Video Walkthrough Section**](#-video-walkthrough--demo-presentation)
-> - 🧪 **Test Evidence**: **126/126 unit & integration tests passing** in 12.56s
+> - 🧪 **Test Evidence**: **126 verified tests in the core validation suite** in 12.56s
 
 ---
 
 ## 🎥 Video Walkthrough & Demo Presentation
 
-A dedicated 3-minute video demonstration is recorded to walk through AuRAG's voice-prompted architecture, live telemetry monitoring, and multi-agent GraphRAG reasoning.
+A dedicated video demonstration walks through AuRAG's voice-prompted architecture, live telemetry monitoring, and multi-agent GraphRAG reasoning.
 
 <div align="center">
 
-[![AuRAG Voice-Driven Demo Video](https://img.shields.io/badge/▶_Watch_Demo_Video-Loom_%2F_YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-*(Click above to watch the 3-minute video walkthrough)*
+[![AuRAG Voice-Driven Demo Video](https://img.shields.io/badge/▶_Watch_Demo_Video-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
+*(Click above to watch the walkthrough video)*
 
 </div>
 
-### ⏱️ Video Scene Breakdown (3-Minute Walkthrough)
+### ⏱️ Video Scene Breakdown (Walkthrough Guide)
 
 | Timestamp | Scene | Key Feature Demonstrated |
 | :---: | :--- | :--- |
 | **0:00 – 0:30** | **The Industrial Challenge** | Fragmented plant data (P&ID schematics, maintenance logs, ERP records) causes costly unplanned downtime. |
-| **0:30 – 1:15** | **Wispr Flow Voice Dictation** | Live demonstration of Wispr Flow voice prompt engineering in Antigravity IDE (3,911 words at 87 WPM). |
+| **0:30 – 1:15** | **Wispr Flow Voice Dictation** | Demonstration of Wispr Flow voice prompt engineering in Antigravity IDE (3,911 words at 87 WPM). |
 | **1:15 – 1:50** | **Predictive SCADA Telemetry** | Real-time sensor stream monitoring; NASA IMS bearing run-to-failure vibration spike detection (>4.5 mm/s). |
 | **1:50 – 2:30** | **Multi-Agent GraphRAG** | Supervisory swarm coordinates RCA specialist, OSHA/API 610 compliance agent, and Neo4j multi-hop traversals. |
 | **2:30 – 3:00** | **Automated Work Order & Wrap-Up** | Instant grounded work order draft generation with immutable citations and passing test suite verification. |
@@ -161,7 +162,7 @@ flowchart TD
 * **Industrial Telemetry Streaming**:
   Built-in support for OPC-UA industrial protocol adapters, synthetic SCADA sensor generation, and NASA IMS bearing run-to-failure vibration datasets.
 * **Modern Full-Stack Architecture**:
-  High-performance FastAPI backend with Python 3.12, thread-safe Neo4j driver connection pooling, and a Next.js 15 responsive industrial operations console.
+  High-performance FastAPI backend with Python 3.12, thread-safe Neo4j driver connection pooling, and a Next.js 16.2.11 responsive industrial operations console.
 
 ---
 
@@ -170,11 +171,11 @@ flowchart TD
 AuRAG maintains a rigorous, deterministic test suite verifying every component from telemetry generation to multi-agent reasoning:
 
 ```bash
-# Execute core test suite locally
+# Execute core validation suite locally
 pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 ```
 
-### Verified Test Suite Breakdown (126 Passing Tests)
+### Verified Test Suite Breakdown (126 Verified Tests in Core Suite)
 
 | Test Domain | Target Path | Tests | Execution | Status |
 | :--- | :--- | :---: | :---: | :---: |
@@ -182,9 +183,9 @@ pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 | **Hybrid Retrieval & Graph Traversal** | `tests/retrieval/` | 36 | ~3.8s | **PASS ✅** |
 | **Multi-Agent Swarm & Safety Guardrails**| `tests/agents/` | 30 | ~2.9s | **PASS ✅** |
 | **Telemetry & SCADA Streaming** | `tests/telemetry/` | 19 | ~1.7s | **PASS ✅** |
-| **Total Verified Passing Suite** | **All Core Domains** | **126 / 126** | **12.56s** | **100% PASS ✅** |
+| **Total Core Verified Suite** | **All Core Domains** | **126 / 126** | **12.56s** | **100% PASS ✅** |
 
-> All 126 tests execute cleanly in under 13 seconds with zero flaky dependencies or external network requirements.
+> **Repository Test Corpus Note**: The full repository includes **322 test functions** across all test files in `tests/`, covering deep-domain edge cases, offline regressions, and specialized test harnesses. The **126 tests** above represent the active, verified core validation suite executing in under 13 seconds with zero external network dependencies.
 
 ---
 
@@ -194,7 +195,7 @@ pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 * **Knowledge Graph & Vector DB**: Neo4j 5 Enterprise, Cypher Query Language, Qdrant Vector Store
 * **Retrieval & Reranking**: Sentence-Transformers, BM25, Reciprocal Rank Fusion (RRF), Cross-Encoder
 * **Agent Framework**: Multi-agent blackboard architecture, LangGraph concepts, Structured Tool Calling
-* **Frontend UI**: Next.js 15 (App Router), TypeScript, Tailwind CSS, Shadcn UI, Lucide Icons
+* **Frontend UI**: Next.js 16.2.11 (App Router), React 19.2.4, TypeScript, Tailwind CSS, Shadcn UI, Lucide Icons
 * **Industrial Telemetry**: OPC-UA binary protocol adapter, NASA IMS bearing dataset, SCADA synthetic streamer
 * **Voice-to-Code Tooling**: **Wispr Flow Voice Dictation Engine**, Antigravity IDE
 
@@ -209,8 +210,8 @@ pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 
 ### Step 1: Clone & Configure
 ```bash
-git clone https://github.com/Niss54/Aurag.git
-cd Aurag
+git clone https://github.com/hacker9854-ship-it/AuRAG.git
+cd AuRAG
 cp .env.example .env
 ```
 
@@ -250,7 +251,7 @@ This research and its technical specifications are preserved for auditability an
 
 | Document | Purpose |
 | :--- | :--- |
-| [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | Canonical Wispr Flow voice-to-code evidence dossier, 12-screenshot analysis, and commit mapping |
+| [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | Canonical Wispr Flow voice-to-code evidence dossier, 12-screenshot analysis, and subsystem traceability |
 | [**JUDGE_README.md**](./JUDGE_README.md) | 3-minute executive evaluation guide for hackathon judges |
 | [**ARCHITECTURE.md**](./ARCHITECTURE.md) | Authoritative system architecture, graph ontology schemas, and ADRs |
 | [**wispr-flow/README.md**](./wispr-flow/README.md) | 12 high-resolution screenshots gallery and dictation transcripts |
@@ -262,4 +263,4 @@ This research and its technical specifications are preserved for auditability an
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.  
-Copyright (c) 2026 Niss54.
+Copyright (c) 2026 hacker9854-ship-it.

@@ -41,7 +41,7 @@ When a plant superintendent asks: *"Why did the machine spend money?"*, AuRAG tr
   - `MockLightningProvider`: Zero-cost offline deterministic simulation returning valid BOLT11 strings and preimages for judge evaluation.
   - `LNbitsProvider` / `CLN`: Server-side remote wallet adapters moving real satoshis across Lightning channels on `regtest`, `signet`, or `mainnet`.
   - Deterministic idempotency key hashing (`sha256(site:equipment:service:event)`) guaranteeing zero double-spends.
-- **Operator Console:** Next.js 16 (App Router), React 19, Tailwind CSS v4, Lucide icons, and dedicated `/machine-money` workspace with interactive SVG BOLT11 QR matrix.
+- **Operator Console:** Next.js 16.2.11 (App Router), React 19.2.4, Tailwind CSS v4, Lucide icons, and dedicated `/machine-money` workspace with interactive SVG BOLT11 QR matrix.
 - **Nostr Stretch Readiness (Experimental):** NIP-47-inspired Nostr Wallet Connect simulation (local loopback, HMAC-SHA256 signatures) and NIP-90 (Data Vending Machine `kind: 5100`) telemetry job broadcasting concept.
 
 ---
@@ -56,12 +56,12 @@ When a plant superintendent asks: *"Why did the machine spend money?"*, AuRAG tr
 
 ## 5. Verification & Testing Proof
 
-- **126 Verified Unit & Integration Tests (100% Passing):**
+- **126 Verified Tests in Core Validation Suite (322 Total Test Functions in Repository):**
   - **41 Tests**: Backend Core, Authentication & Multi-Tenancy.
   - **36 Tests**: Hybrid GraphRAG, Qdrant Vector Retrieval & BM25.
   - **30 Tests**: Multi-Agent Swarm, Safety Guardrails & RCA.
   - **19 Tests**: Industrial Telemetry, SCADA & NASA IMS Replay.
-  - All 126 tests execute deterministically in 12.56s via `pytest`.
+  - All 126 core tests execute deterministically in 12.56s via `pytest`.
 - **Zero Secrets Committed:** Tested against `.gitignore` with `*.key`, `*.pem`, `*.macaroon` protection.
 
 ---
