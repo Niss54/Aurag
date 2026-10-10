@@ -211,7 +211,7 @@ pytest tests/backend tests/retrieval tests/agents tests/telemetry -q
 
 ### Step 1: Clone & Configure
 ```bash
-git clone https://github.com/hacker9854-ship-it/AuRAG.git
+git clone https://github.com/Niss54/Aurag.git
 cd AuRAG
 cp .env.example .env
 ```
@@ -240,6 +240,7 @@ npm run dev
 
 | Document | Purpose |
 | :--- | :--- |
+| [**AuRAG_Wispr_Flow_Live_Development_Evidence.mp4**](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4) | **3-Minute Raw Screen Recording** showing live Wispr Flow voice-prompted engineering and probe execution in IDE |
 | [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | Canonical Wispr Flow voice-to-code evidence dossier, 12-screenshot analysis, and subsystem traceability |
 | [**JUDGE_README.md**](./JUDGE_README.md) | 3-minute executive evaluation guide for hackathon judges |
 | [**ARCHITECTURE.md**](./ARCHITECTURE.md) | Authoritative system architecture, graph ontology schemas, and ADRs |
@@ -252,4 +253,4 @@ npm run dev
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.  
-Copyright (c) 2026 hacker9854-ship-it.
+Copyright (c) 2026 Niss54.

@@ -78,6 +78,9 @@ def run_synthetic_probe(base_url: str = "http://localhost:8000", timeout_seconds
     # 4. Automation Policies
     checks["automations"] = check_http_endpoint(f"{base_url}/api/automations/policies", timeout_seconds=timeout_seconds)
 
+    # 5. Telemetry High-Frequency & ISO-10816 Probe
+    checks["telemetry_probe"] = check_http_endpoint(f"{base_url}/api/telemetry/probe", timeout_seconds=timeout_seconds)
+
     # Summary
     all_healthy = all(c["healthy"] for c in checks.values())
     latencies = [c["latency_ms"] for c in checks.values() if c["status_code"] > 0]

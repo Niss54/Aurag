@@ -112,3 +112,44 @@ def draft(request: DraftRequest, session=Depends(get_session)) -> dict:
             status_code=503,
             detail={"error": "telemetry_draft_failed", "detail": str(exc)},
         ) from exc
+
+
+class ProbeRequest(BaseModel):
+    target_sampling_rate_hz: float = 20000.0
+    iso_zone_c_threshold_mms: float = 4.5
+    zone_alias: str = "Zone C"
+    tolerance_hz: float = 0.0
+
+
+@router.get("/telemetry/health")
+@router.get("/telemetry/probe")
+def get_telemetry_probe() -> dict:
+    from telemetry.probe import run_telemetry_health_check
+
+    report = run_telemetry_health_check()
+    if not report.all_passed:
+        raise HTTPException(
+            status_code=503,
+            detail=report.to_dict(),
+        )
+    return report.to_dict()
+
+
+@router.post("/telemetry/probe")
+def post_telemetry_probe(request: ProbeRequest | None = None) -> dict:
+    from telemetry.probe import TelemetryHealthProbe
+
+    req = request or ProbeRequest()
+    probe = TelemetryHealthProbe(
+        target_sampling_rate_hz=req.target_sampling_rate_hz,
+        iso_zone_c_threshold_mms=req.iso_zone_c_threshold_mms,
+        tolerance_hz=req.tolerance_hz,
+    )
+    report = probe.run_probe()
+    if not report.all_passed:
+        raise HTTPException(
+            status_code=503,
+            detail=report.to_dict(),
+        )
+    return report.to_dict()
+

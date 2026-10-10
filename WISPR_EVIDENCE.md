@@ -3,11 +3,12 @@
 > **Hackathon Event:** Hacker House Goa (HHGoa) 2026  
 > **Evaluation Task:** **Wispr Flow Shortlisting Task**  
 > **Project Title:** **AuRAG — Voice-Driven Development Evidence & Industrial Intelligence**  
-> **Repository:** [`hacker9854-ship-it/AuRAG`](https://github.com/hacker9854-ship-it/AuRAG)  
+> **Repository:** [`Niss54/Aurag`](https://github.com/Niss54/Aurag)  
 > **Voice-to-Code Technology:** **Wispr Flow Voice Dictation Engine** (3,911+ Dictated Words at 87 WPM)  
 > **Proof Vault:** [`wispr-flow/`](./wispr-flow) (12 High-Resolution Visual Evidence Artifacts)  
 > **Verified Test Suites:** **126 verified core pytest cases** (317 backend pytest tests, 61 frontend Vitest tests, 6 browser E2E checks — 392 total automated checks passing)  
-> **Walkthrough Video:** [**AuRAG Demo on YouTube**](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
+> **Live Voice Coding Video:** [**AuRAG_Wispr_Flow_Live_Development_Evidence.mp4**](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4) (Direct 3-min IDE Screen Recording)
+> **Platform Walkthrough Video:** [**AuRAG Demo on YouTube**](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
 
 ---
 
@@ -484,7 +485,7 @@ To launch the complete platform locally:
 
 ```bash
 # Step 1: Clone the repository
-git clone https://github.com/hacker9854-ship-it/AuRAG.git
+git clone https://github.com/Niss54/Aurag.git
 cd AuRAG
 
 # Step 2: Launch backend services

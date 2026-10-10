@@ -80,6 +80,13 @@ def _check_lightning() -> None:
         raise RuntimeError("No Lightning provider registered")
 
 
+def _check_telemetry() -> None:
+    from telemetry.probe import run_telemetry_health_check
+    report = run_telemetry_health_check()
+    if not report.all_passed:
+        raise RuntimeError(f"Telemetry probe failed: {report.summary}")
+
+
 def dependency_checks() -> dict:
     if _is_standalone_mode():
         return {
@@ -90,6 +97,7 @@ def dependency_checks() -> dict:
             "gemini": lambda: True,
             "mem0": _check_mem0,
             "lightning": _check_lightning,
+            "telemetry": _check_telemetry,
         }
     return {
         "neo4j": _check_neo4j,
@@ -99,7 +107,9 @@ def dependency_checks() -> dict:
         "gemini": lambda: _require_env("GEMINI_API_KEY"),
         "mem0": _check_mem0,
         "lightning": _check_lightning,
+        "telemetry": _check_telemetry,
     }
+
 
 
 @router.get("/health/live")

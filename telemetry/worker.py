@@ -50,6 +50,13 @@ class TelemetryWorker:
         self.drift_schedule = drift_schedule or [0.0, 0.25, 0.5, 0.75, 1.0]
         self._phase = 0
 
+    def probe_health(self) -> dict:
+        """Run automated health check probe verifying 20 kHz sampling and ISO 10816 threshold."""
+        from telemetry.probe import run_telemetry_health_check
+
+        report = run_telemetry_health_check()
+        return report.to_dict()
+
     def run_cycle(self, session) -> dict:
         drift_pct = self.drift_schedule[self._phase % len(self.drift_schedule)]
         self._phase += 1
