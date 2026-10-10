@@ -20,7 +20,8 @@ During the engineering sprint for **Hacker House Goa (HHGoa)**, AuRAG was develo
   - **61 frontend Vitest tests**
   - **6 browser E2E checks** (Playwright)
   - **392 total automated checks passing**
-* 🎥 **Video Walkthrough**: Recorded walkthrough and presentation ([YouTube Demo Video](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq))
+* 🎥 **Live Voice Coding Build Video**: [**Stream on Google Drive**](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing) *(3-min unedited IDE recording)*
+* 🎥 **Platform Walkthrough Video**: [YouTube Demo Video](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
 
 ---
 

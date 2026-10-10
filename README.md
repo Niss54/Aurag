@@ -19,6 +19,7 @@
 <p align="center">
   <a href="./WISPR_EVIDENCE.md"><img src="https://img.shields.io/badge/Wispr%20Flow-100%25%20Voice--Driven-8A2BE2?style=for-the-badge&logo=soundcharts&logoColor=white" alt="Wispr Flow Voice-Driven"/></a>
   <a href="./WISPR_EVIDENCE.md#7-testing-evidence-392-automated-checks--126-core-pytest-cases"><img src="https://img.shields.io/badge/Pytest-126%20Core%20%2F%20392%20Checks-2ea44f?style=for-the-badge&logo=pytest&logoColor=white" alt="126 Core / 392 Checks"/></a>
+  <a href="https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing"><img src="https://img.shields.io/badge/Wispr%20Build%20Video-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Wispr Build Video"/></a>
   <a href="https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq"><img src="https://img.shields.io/badge/Walkthrough%20Video-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo Video"/></a>
   <a href="https://au-rag.vercel.app"><img src="https://img.shields.io/badge/Live%20Demo-au--rag.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/></a>
   <a href="./wispr-flow"><img src="https://img.shields.io/badge/Screenshots-12%20Proofs-blue?style=for-the-badge&logo=googlephotos&logoColor=white" alt="12 Proof Screenshots"/></a>
@@ -73,7 +74,8 @@ Evidence Pack ➔ 12 Screenshots ➔ Voice Prompt Log ➔ Subsystem Traceability
 >   The link provided in the Google Form ([YouTube Video](https://youtu.be/FnFD2-CyXWE)) demonstrates the full functionality, architecture, and live UI of the AuRAG platform (NASA IMS telemetry, GraphRAG reasoning, multi-agent Copilot, and machine money workflows).
 > * **2. Live Wispr Flow Voice-Driven Build Evidence (Raw Video in Repository):**  
 >   To inspect the raw, unedited ~3-minute screen recording of the **actual voice-coding session using Wispr Flow** in the IDE (live microphone dictation of telemetry health probes with 20 kHz sampling and ISO 10816 Zone C verification, followed by automated test execution), please view the video directly in the root of this repository:  
->   👉 **[`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4)**
+>   👉 **[Watch Live on Google Drive (Instant 1-Click Stream)](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing)** *(No download required)*
+>   *(Alternative offline copy in repository: [`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4))*
 
 ## 🎥 Video Walkthrough & Demo Presentation
 
@@ -249,7 +251,7 @@ npm run dev
 
 | Document | Purpose |
 | :--- | :--- |
-| [**AuRAG_Wispr_Flow_Live_Development_Evidence.mp4**](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4) | **3-Minute Raw Screen Recording** showing live Wispr Flow voice-prompted engineering and probe execution in IDE |
+| [**Wispr Live Build Video (Drive Stream)**](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing) | **3-Minute Instant Video Stream** showing live Wispr Flow voice-prompted engineering and probe execution in IDE (or raw [in-repo MP4](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4)) |
 | [**WISPR_EVIDENCE.md**](./WISPR_EVIDENCE.md) | Canonical Wispr Flow voice-to-code evidence dossier, 12-screenshot analysis, and subsystem traceability |
 | [**JUDGE_README.md**](./JUDGE_README.md) | 3-minute executive evaluation guide for hackathon judges |
 | [**ARCHITECTURE.md**](./ARCHITECTURE.md) | Authoritative system architecture, graph ontology schemas, and ADRs |

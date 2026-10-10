@@ -62,7 +62,8 @@ For the **Hacker House Goa 2026 Wispr Flow Shortlisting Task (29 September 2026 
 >   The link provided in the Google Form ([YouTube Video](https://youtu.be/FnFD2-CyXWE)) demonstrates the full functionality, architecture, and live UI of the AuRAG platform (NASA IMS telemetry, GraphRAG reasoning, multi-agent Copilot, and machine money workflows).
 > * **2. Live Wispr Flow Voice-Driven Build Evidence (Raw Video in Repository):**  
 >   To inspect the raw, unedited ~3-minute screen recording of the **actual voice-coding session using Wispr Flow** in the IDE (live microphone dictation of telemetry health probes with 20 kHz sampling and ISO 10816 Zone C verification, followed by automated test execution), please view the video directly in the root of this repository:  
->   👉 **[`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4)**
+>   👉 **[Watch Live on Google Drive (Instant 1-Click Stream)](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing)** *(No download required)*
+>   *(Alternative offline copy in repository: [`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4))*
 
 ### 🎥 3-Minute Video Walkthrough
 * Watch the recorded walkthrough: **[AuRAG Voice-Driven Demo on YouTube](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)**

@@ -7,7 +7,7 @@
 > **Voice-to-Code Technology:** **Wispr Flow Voice Dictation Engine** (3,911+ Dictated Words at 87 WPM)  
 > **Proof Vault:** [`wispr-flow/`](./wispr-flow) (12 High-Resolution Visual Evidence Artifacts)  
 > **Verified Test Suites:** **126 verified core pytest cases** (317 backend pytest tests, 61 frontend Vitest tests, 6 browser E2E checks — 392 total automated checks passing)  
-> **Live Voice Coding Video:** [**AuRAG_Wispr_Flow_Live_Development_Evidence.mp4**](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4) (Direct 3-min IDE Screen Recording)
+> **Live Voice Coding Video:** [**Watch on Google Drive (Instant Stream)](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing)** *(or raw [in-repo MP4](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4))*
 > **Platform Walkthrough Video:** [**AuRAG Demo on YouTube**](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)
 
 ---
@@ -476,7 +476,8 @@ AuRAG is designed to run reliably in both standalone offline demonstration envir
 >   The link provided in the Google Form ([YouTube Video](https://youtu.be/FnFD2-CyXWE)) demonstrates the full functionality, architecture, and live UI of the AuRAG platform (NASA IMS telemetry, GraphRAG reasoning, multi-agent Copilot, and machine money workflows).
 > * **2. Live Wispr Flow Voice-Driven Build Evidence (Raw Video in Repository):**  
 >   To inspect the raw, unedited ~3-minute screen recording of the **actual voice-coding session using Wispr Flow** in the IDE (live microphone dictation of telemetry health probes with 20 kHz sampling and ISO 10816 Zone C verification, followed by automated test execution), please view the video directly in the root of this repository:  
->   👉 **[`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4)**
+>   👉 **[Watch Live on Google Drive (Instant 1-Click Stream)](https://drive.google.com/file/d/1r9GXr_XC9JMi8IEJcizFxLRLRVareDIA/view?usp=sharing)** *(No download required)*
+>   *(Alternative offline copy in repository: [`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4))*
 
 ### 6.2 3-Minute Video Walkthrough
 * Watch the recorded walkthrough: **[AuRAG Voice-Driven Demo on YouTube](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)**
