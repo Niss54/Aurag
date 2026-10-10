@@ -469,6 +469,15 @@ AuRAG is designed to run reliably in both standalone offline demonstration envir
 * 💻 **Local URL**: [**http://localhost:3000**](http://localhost:3000)
 * 📖 **FastAPI Interactive Docs**: [**http://localhost:8000/docs**](http://localhost:8000/docs)
 
+
+> [!IMPORTANT]
+> **📢 Note on Submission Video Links (Platform Demo vs. Wispr Flow Voice Build Evidence):**
+> * **1. Live Platform Demonstration (Submitted Social / YouTube Link):**  
+>   The link provided in the Google Form ([YouTube Video](https://youtu.be/FnFD2-CyXWE)) demonstrates the full functionality, architecture, and live UI of the AuRAG platform (NASA IMS telemetry, GraphRAG reasoning, multi-agent Copilot, and machine money workflows).
+> * **2. Live Wispr Flow Voice-Driven Build Evidence (Raw Video in Repository):**  
+>   To inspect the raw, unedited ~3-minute screen recording of the **actual voice-coding session using Wispr Flow** in the IDE (live microphone dictation of telemetry health probes with 20 kHz sampling and ISO 10816 Zone C verification, followed by automated test execution), please view the video directly in the root of this repository:  
+>   👉 **[`AuRAG_Wispr_Flow_Live_Development_Evidence.mp4`](./AuRAG_Wispr_Flow_Live_Development_Evidence.mp4)**
+
 ### 6.2 3-Minute Video Walkthrough
 * Watch the recorded walkthrough: **[AuRAG Voice-Driven Demo on YouTube](https://youtu.be/FnFD2-CyXWE?si=5BlxmN8R16615zJq)**
 
